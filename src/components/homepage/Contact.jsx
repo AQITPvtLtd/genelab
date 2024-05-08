@@ -9,6 +9,7 @@ const Contact = () => {
         height={1000}
         width={10000}
         className="w-full h-full"
+        alt="bg"
       />
       <div className="absolute inset-0 flex-auto px-4 lg:px-10 py-10 pt-0 text-white">
         <div className="flex justify-center mb-10">
@@ -22,6 +23,7 @@ const Contact = () => {
             height={10000}
             width={10000}
             className="h-[440px] w-full absolute inset-0 mt-10"
+            alt="contact"
           />
           <form className="mx-32">
             <div className="flex flex-wrap">

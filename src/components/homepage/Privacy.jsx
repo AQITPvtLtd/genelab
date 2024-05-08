@@ -11,6 +11,7 @@ const Privacy = () => {
           height={2000}
           width={2000}
           className="h-full w-full"
+          alt="privacy"
         />
         <div className="absolute inset-0 grid grid-cols-2">
           <h1
@@ -20,9 +21,9 @@ const Privacy = () => {
           </h1>
           <p className="text-white col-start-2 ml-4">
             We believe you should have a safe place to explore and understand
-            your genes. That’s why Privacy and Security are woven into
-            everything we do. We also believe in choice. So you're opted out of
-            sharing unless you choose to opt in.
+            your genes. That&apos;s why Privacy and Security are woven into
+            everything we do. We also believe in choice. So you&apos;re opted
+            out of sharing unless you choose to opt in.
           </p>
         </div>
       </div>

@@ -7,7 +7,13 @@ const Book = () => {
     <div>
       <div className="relative mb-10">
         <div className="grid grid-cols-8">
-          <Image src="/random2.png" width={200} height={200} className="mt-7" />
+          <Image
+            src="/random2.png"
+            width={200}
+            height={200}
+            className="mt-7"
+            alt="random"
+          />
           <div className="col-span-4 col-start-3">
             <div className="flex justify-center mb-3">
               <div className=" text-5xl font-bold  bg-gradient-to-r from-blue inline-block to-darkgreen mt-10 text-transparent bg-clip-text">
@@ -29,6 +35,7 @@ const Book = () => {
             width={300}
             height={300}
             className="col-start-8 mt-7"
+            alt="random"
           />
         </div>
       </div>

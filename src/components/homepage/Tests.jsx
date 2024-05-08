@@ -10,6 +10,7 @@ const Tests = () => {
           height={10000}
           width={10000}
           className="w-full h-full opacity-50"
+          alt="tests"
         />
         <div className=" absolute inset-0 mt-24">
           <div className="flex justify-center mb-10">
@@ -36,9 +37,9 @@ const Tests = () => {
                   </h5>
                 </div>
                 <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
-                  This test analyzes an individual's DNA sequence to identify
-                  genetic variations that may be associated with certain
-                  diseases or conditions.
+                  This test analyzes an individual&apos;s DNA sequence to
+                  identify genetic variations that may be associated with
+                  certain diseases or conditions.
                 </p>
               </div>
             </Link>
@@ -60,9 +61,9 @@ const Tests = () => {
                   </h5>
                 </div>
                 <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
-                  This test analyzes an individual's DNA sequence to identify
-                  genetic variations that may be associated with certain
-                  diseases or conditions.
+                  This test analyzes an individual&apos;s DNA sequence to
+                  identify genetic variations that may be associated with
+                  certain diseases or conditions.
                 </p>
               </div>
             </Link>
@@ -84,9 +85,9 @@ const Tests = () => {
                   </h5>
                 </div>
                 <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
-                  This test analyzes an individual's DNA sequence to identify
-                  genetic variations that may be associated with certain
-                  diseases or conditions.
+                  This test analyzes an individual&apos;s DNA sequence to
+                  identify genetic variations that may be associated with
+                  certain diseases or conditions.
                 </p>
               </div>
             </Link>
