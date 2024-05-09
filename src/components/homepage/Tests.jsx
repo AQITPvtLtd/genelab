@@ -24,14 +24,14 @@ const Tests = () => {
               className=" bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:scale-105 hover:cursor-pointer md:max-w-xl hover:bg-gray-100"
             >
               <Image
-                className="object-cover h-[250px] w-full rounded-lg"
+                className="object-cover h-[250px] w-full rounded-t-lg"
                 src="/tests/test1.jpg"
                 alt=""
                 width={280}
                 height={200}
               />
               <div className="flex flex-col justify-between leading-normal">
-                <div className="bg-primary text-center p-2">
+                <div className="bg-blue text-center p-2 text-white">
                   <h5 className=" text-2xl font-bold tracking-tight">
                     Genetic Sequencing Test
                   </h5>
@@ -48,14 +48,14 @@ const Tests = () => {
               className=" bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:scale-105 hover:cursor-pointer md:max-w-xl hover:bg-gray-100"
             >
               <Image
-                className="object-cover h-[250px] w-full rounded-lg"
+                className="object-cover h-[250px] w-full rounded-t-lg"
                 src="/tests/test2.jpg"
                 alt=""
                 width={280}
                 height={200}
               />
               <div className="flex flex-col justify-between leading-normal">
-                <div className="bg-primary text-center p-2">
+                <div className="bg-blue text-center p-2 text-white">
                   <h5 className=" text-2xl font-bold tracking-tight">
                     Genetic Sequencing Test
                   </h5>
@@ -72,14 +72,14 @@ const Tests = () => {
               className=" bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:scale-105 hover:cursor-pointer md:max-w-xl hover:bg-gray-100"
             >
               <Image
-                className="object-cover h-[250px] w-full rounded-lg"
+                className="object-cover h-[250px] w-full rounded-t-lg"
                 src="/tests/test3.jpg"
                 alt=""
                 width={280}
                 height={200}
               />
               <div className="flex flex-col justify-between leading-normal">
-                <div className="bg-primary text-center p-2">
+                <div className="bg-blue text-center p-2 text-white">
                   <h5 className=" text-2xl font-bold tracking-tight">
                     Genetic Sequencing Test
                   </h5>

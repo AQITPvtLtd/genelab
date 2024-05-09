@@ -32,10 +32,12 @@ const HomeBanner = () => {
                 animate && "animate__animated animate__slideInDown"
               }`}
             >
-              <h1 className={`font-bold text-5xl flex justify-center`}>
+              <h1
+                className={`font-bold text-6xl flex justify-center bg-gradient-to-b from-blue to-darkgreen text-transparent bg-clip-text`}
+              >
                 Discover Your Genetic Blueprint
               </h1>
-              <h2 className="font-bold text-3xl flex justify-center">
+              <h2 className="font-bold text-4xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
                 Unlocking Insights for a Healthier Future
               </h2>
             </div>

@@ -133,7 +133,7 @@ const Header = () => {
                               className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
-                              <span className="pl-3">
+                              <span className="">
                                 <svg width="25" height="24" viewBox="0 0 25 24">
                                   <path
                                     fillRule="evenodd"
