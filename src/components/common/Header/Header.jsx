@@ -67,7 +67,7 @@ const Header = () => {
                 } `}
               >
                 <Image
-                  src="/logo.png"
+                  src="/logo2.png"
                   alt="logo"
                   width={200}
                   height={200}
