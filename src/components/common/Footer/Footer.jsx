@@ -1,12 +1,22 @@
 import React from "react";
 import Link from "next/link";
+import Image from "next/image";
 const Footer = () => {
   return (
     <div>
-      <footer className="flex flex-col items-center text-center text-surface">
+      <footer className=" items-center text-center text-surface">
         <div className="container px-6 pt-6">
+          <Link href="/" className="flex justify-center">
+            <Image
+              src="/logo.png"
+              alt="logo"
+              width={200}
+              height={200}
+              className="w-[200px] ml-4 left-0 mb-4"
+            />
+          </Link>
           {/* <!-- Social media icons container --> */}
-          <div className="mb-6 flex justify-center space-x-2">
+          <div className="mb-6 flex justify-center space-x-2 ml-3">
             <Link
               href="#!"
               type="button"
@@ -133,7 +143,7 @@ const Footer = () => {
           </div>
 
           {/* <!-- Links section --> */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid grid-cols-2 lg:grid-cols-4">
             <div className="mb-6">
               <h5 className="mb-2.5 font-bold uppercase">Links</h5>
 

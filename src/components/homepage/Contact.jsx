@@ -8,12 +8,12 @@ const Contact = () => {
         src="/darkbg.png"
         height={1000}
         width={10000}
-        className="w-full h-full"
+        className="w-full lg:h-[650px] h-[960px]"
         alt="bg"
       />
       <div className="absolute inset-0 flex-auto px-4 lg:px-10 py-10 pt-0 text-white">
         <div className="flex justify-center mb-10">
-          <div className="animate__animated animate__heartBeat animate__infinite animate__slower text-5xl font-bold  bg-gradient-to-r from-darkgreen inline-block to-white mt-10 text-transparent bg-clip-text">
+          <div className="animate__animated animate__heartBeat animate__infinite animate__slower text-4xl lg:text-5xl font-bold  bg-gradient-to-r from-darkgreen inline-block to-white mt-10 text-transparent bg-clip-text">
             REACH OUT TO US
           </div>
         </div>
@@ -22,10 +22,10 @@ const Contact = () => {
             src="/contactDesign2.png"
             height={10000}
             width={10000}
-            className="h-[440px] w-full absolute inset-0 mt-10"
+            className="lg:h-[440px] h-[300px] lg:w-full w-[100px] absolute inset-0 mt-10 object-cover"
             alt="contact"
           />
-          <form className="mx-32">
+          <form className="lg:mx-32">
             <div className="flex flex-wrap">
               <div className="w-full lg:w-6/12 px-4">
                 <div className="relative w-full mb-3">
@@ -167,6 +167,11 @@ const Contact = () => {
                   ></textarea>
                 </div>
               </div>
+            </div>
+            <div className="flex justify-end mr-4">
+              <button className="bg-green text-black font-bold hover:bg-green/90 p-2 rounded-xl">
+                Send
+              </button>
             </div>
           </form>
         </div>

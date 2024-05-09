@@ -11,7 +11,7 @@ const Book = () => {
             src="/random2.png"
             width={200}
             height={200}
-            className="mt-7"
+            className="mt-7 lg:h-[180px] h-[200px] object-cover"
             alt="random"
           />
           <div className="col-span-4 col-start-3">
@@ -20,12 +20,12 @@ const Book = () => {
                 REACH OUT TO US
               </div>
             </div>
-            <p className="flex justify-center text-center">
+            <p className="flex justify-center lg:text-center">
               With cutting-edge technology and experienced geneticists, we offer
               accurate and personalized genetic testing services
             </p>
             <Link href="/">
-              <div className="animate__animated animate__pulse animate__infinite animate__slower shadow-xl flex justify-center bg-blue text-white rounded-xl p-3 mt-3 text-xl font-bold">
+              <div className="text-center animate__animated animate__pulse animate__infinite animate__slower shadow-xl flex justify-center bg-blue text-white rounded-xl p-3 mt-3 text-xl font-bold">
                 Book An Appointment Now
               </div>
             </Link>
@@ -34,7 +34,7 @@ const Book = () => {
             src="/random2.png"
             width={300}
             height={300}
-            className="col-start-8 mt-7"
+            className="col-start-8 mt-7 lg:h-[180px] h-[200px] object-cover"
             alt="random"
           />
         </div>

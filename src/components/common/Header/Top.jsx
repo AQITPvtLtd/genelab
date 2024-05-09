@@ -43,11 +43,11 @@ const Top = () => {
       <div className="lg:flex justify-evenly">
         <div className="flex justify-center lg:mb-0 mb-2 mr-10 ">
           <FaPhoneAlt className="mt-1 mr-1" />
-          +91-11-47589500
+          +91-981 172 4700
         </div>
         <div className="flex justify-center lg:mb-0 mb-2">
           <IoMail className="mt-1 mr-1" />
-          info@medicamen.com
+          info@genelab.com
         </div>
       </div>
     </div>

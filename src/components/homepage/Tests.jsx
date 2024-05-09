@@ -9,16 +9,16 @@ const Tests = () => {
           src="/tests.png"
           height={10000}
           width={10000}
-          className="w-full h-full opacity-50"
+          className="w-full lg:h-full opacity-50 h-[2000px] object-cover"
           alt="tests"
         />
         <div className=" absolute inset-0 mt-24">
-          <div className="flex justify-center mb-10">
+          <div className="flex justify-center mb-10 text-center">
             <div className="text-5xl font-bold  bg-gradient-to-r from-darkgreen inline-block to-blue text-transparent bg-clip-text">
               EXPLORE OUR RANGE OF TESTS
             </div>
           </div>
-          <div className="grid grid-cols-3 gap-8 mx-10">
+          <div className="lg:grid grid-cols-3 gap-8 mx-10">
             <Link
               href={`/`}
               className=" bg-white border border-gray-200 rounded-lg shadow md:flex-row hover:scale-105 hover:cursor-pointer md:max-w-xl hover:bg-gray-100"
@@ -36,7 +36,7 @@ const Tests = () => {
                     Genetic Sequencing Test
                   </h5>
                 </div>
-                <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
+                <p className="mb-3 font-bold lg:text-gray-700 line-clamp-6 p-5">
                   This test analyzes an individual&apos;s DNA sequence to
                   identify genetic variations that may be associated with
                   certain diseases or conditions.
@@ -60,7 +60,7 @@ const Tests = () => {
                     Genetic Sequencing Test
                   </h5>
                 </div>
-                <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
+                <p className="mb-3 font-bold lg:text-gray-700 line-clamp-6 p-5">
                   This test analyzes an individual&apos;s DNA sequence to
                   identify genetic variations that may be associated with
                   certain diseases or conditions.
@@ -84,7 +84,7 @@ const Tests = () => {
                     Genetic Sequencing Test
                   </h5>
                 </div>
-                <p className="mb-3 font-normal text-gray-700 line-clamp-6 p-5">
+                <p className="mb-3 font-bold lg:text-gray-700 line-clamp-6 p-5">
                   This test analyzes an individual&apos;s DNA sequence to
                   identify genetic variations that may be associated with
                   certain diseases or conditions.

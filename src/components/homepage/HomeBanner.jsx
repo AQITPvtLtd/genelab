@@ -15,14 +15,14 @@ const HomeBanner = () => {
       <div className="relative">
         <Image
           src="/banner.png"
-          width={10000}
           height={1000}
-          className="w-full"
+          width={1000}
+          className="w-full mt-[195px] lg:mt-0 lg:h-full h-[300px] object-cover"
           alt="home"
         />
         <div className="absolute inset-0 bg-white bg-opacity-60 opacity-30 z-20"></div>
 
-        <h1 className=" absolute inset-0 mt-[200px]">
+        <h1 className=" absolute inset-0 lg:mt-[200px] mt-[50px] lg:ml-0 ml-5">
           <ScrollTrigger
             onEnter={() => setAnimate(true)}
             onExit={() => setAnimate(false)}
@@ -39,9 +39,9 @@ const HomeBanner = () => {
                 Unlocking Insights for a Healthier Future
               </h2>
             </div>
-            <div className="grid grid-cols-8 mt-10">
+            <div className="lg:grid grid-cols-8 lg:mt-10 mt-14 lg:mr-0 mr-7">
               <div
-                className={`col-span-2 ml-3 shadow-2xl bg-white p-7 bg-opacity-50 rounded-full ${
+                className={`col-span-2 ml-3 shadow-2xl bg-white p-7 bg-opacity-50 rounded-full lg:mb-0 mb-3 ${
                   animate && "animate__animated animate__slideInLeft"
                 }`}
               >
@@ -57,7 +57,7 @@ const HomeBanner = () => {
                 </p>
               </div>
               <div
-                className={`col-span-2 shadow-2xl col-start-4 bg-white p-5 bg-opacity-50 rounded-full ${
+                className={`col-span-2 shadow-2xl col-start-4 bg-white p-5 bg-opacity-50 rounded-full lg:mb-0 mb-3 ${
                   animate && "animate__animated animate__slideInUp"
                 }`}
               >
@@ -73,7 +73,7 @@ const HomeBanner = () => {
                 </p>
               </div>
               <div
-                className={`col-span-2 mr-3 shadow-2xl col-start-7 bg-white p-7 lr-3 bg-opacity-50 rounded-full ${
+                className={`col-span-2 mr-3 shadow-2xl col-start-7 bg-white p-7 lr-3 bg-opacity-50 rounded-full lg:mb-0 mb-3 ${
                   animate && "animate__animated animate__slideInRight"
                 }`}
               >
@@ -83,7 +83,7 @@ const HomeBanner = () => {
                 <h2 className="text-blue font-bold p-2 pt-0 text-3xl flex justify-center">
                   DECIDE
                 </h2>
-                <p className=" text-center font-bold">
+                <p className=" text-center font-bold p-1">
                   Make more-informed health decisions for individualized care.
                 </p>
               </div>
