@@ -12,6 +12,7 @@ const page = () => {
             src="/who/who.png"
             width={550}
             height={100}
+            alt="who"
             className="h-[400px] w-[300px] lg:w-[550px] animate__animated animate__slideInLeft"
           />
           <div className="mx-10">
@@ -21,7 +22,7 @@ const page = () => {
             <div className="lg:grid grid-cols-2 gap-3">
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/6.png" width={100} height={100} />
+                  <Image src="/who/6.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
@@ -36,7 +37,7 @@ const page = () => {
               </div>
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/5.png" width={100} height={100} />
+                  <Image src="/who/5.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
@@ -44,14 +45,14 @@ const page = () => {
                   </h3>
                   <p className="p-2 font-bold">
                     We offer tailored genetic testing services to meet the
-                    unique needs of each client, whether it's risk assessment,
-                    treatment guidance, or research purposes.
+                    unique needs of each client, whether it&apos;s risk
+                    assessment, treatment guidance, or research purposes.
                   </p>
                 </div>
               </div>
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/4.png" width={100} height={100} />
+                  <Image src="/who/4.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
@@ -67,7 +68,7 @@ const page = () => {
               </div>
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/3.png" width={100} height={100} />
+                  <Image src="/who/3.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
@@ -82,7 +83,7 @@ const page = () => {
               </div>
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/2.png" width={100} height={100} />
+                  <Image src="/who/2.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
@@ -96,7 +97,7 @@ const page = () => {
               </div>
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
-                  <Image src="/who/1.png" width={100} height={100} />
+                  <Image src="/who/1.png" width={100} height={100} alt="who" />
                 </div>
                 <div className="">
                   <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">

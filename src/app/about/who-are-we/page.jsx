@@ -12,6 +12,7 @@ const page = () => {
             src="/aboutus2.png"
             width={550}
             height={100}
+            alt="about"
             className="h-[400px] w-[550px] animate__animated animate__slideInLeft"
           />
           <div className="mx-10">
@@ -34,6 +35,7 @@ const page = () => {
                 width={400}
                 height={100}
                 className="w-[400px]"
+                alt="about"
               />
             </div>
           </div>
