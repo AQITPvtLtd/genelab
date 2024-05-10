@@ -5,7 +5,7 @@ import Image from "next/image";
 import "animate.css";
 const page = () => {
   return (
-    <div className="mt-[190px]">
+    <div className="mt-[220px] lg:[190px]">
       <div>
         <div className="lg:flex justify-around">
           <Image

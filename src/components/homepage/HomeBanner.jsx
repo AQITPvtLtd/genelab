@@ -17,12 +17,12 @@ const HomeBanner = () => {
           src="/banner.png"
           height={1000}
           width={1000}
-          className="w-full mt-[195px] lg:mt-0 lg:h-full h-[300px] object-cover"
+          className="w-full mt-[195px] lg:mt-0 lg:h-full h-[430px] object-cover"
           alt="home"
         />
         <div className="absolute inset-0 bg-white bg-opacity-60 opacity-30 z-20"></div>
 
-        <h1 className=" absolute inset-0 lg:mt-[200px] mt-[50px] lg:ml-0 ml-5">
+        <div className=" absolute inset-0 lg:mt-[200px] mt-[50px] lg:ml-0 ml-5">
           <ScrollTrigger
             onEnter={() => setAnimate(true)}
             onExit={() => setAnimate(false)}
@@ -91,7 +91,7 @@ const HomeBanner = () => {
               </div>
             </div>
           </ScrollTrigger>
-        </h1>
+        </div>
       </div>
     </div>
   );

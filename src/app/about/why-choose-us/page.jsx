@@ -5,7 +5,7 @@ import Image from "next/image";
 import "animate.css";
 const page = () => {
   return (
-    <div className="mt-[190px]">
+    <div className="mt-[220px] lg:mt-[190px]">
       <div>
         <div className="lg:flex justify-around">
           <Image
@@ -13,10 +13,10 @@ const page = () => {
             width={550}
             height={100}
             alt="who"
-            className="h-[400px] lg:w-[550px] animate__animated animate__slideInLeft"
+            className="h-[300px] lg:w-[550px] animate__animated animate__slideInLeft"
           />
           <div className="mx-10">
-            <div className="mb-10 font-bold text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
+            <div className="mb-10 font-bold text-4xl lg:text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
               <h1>WHY CHOOSE US ?</h1>
             </div>
             <div className="lg:grid grid-cols-2 gap-3">

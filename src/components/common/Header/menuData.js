@@ -28,7 +28,7 @@ const menuData = [
     id: 3,
     title: "Find Tests",
     newTab: true,
-    path: "/find-tests",
+    path: "/tests",
   },
   {
     id: 4,

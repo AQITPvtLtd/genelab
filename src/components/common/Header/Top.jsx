@@ -4,6 +4,7 @@ import { FaPhoneAlt } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { FaTelegramPlane } from "react-icons/fa";
+import { FaLinkedin } from "react-icons/fa";
 import Link from "next/link";
 
 const Top = () => {
@@ -16,27 +17,10 @@ const Top = () => {
           aria-label="social-link"
           target="_blank"
           rel="noopener noreferrer"
-          className="mr-6 text-body-color duration-300 hover:text-green"
+          className="flex mr-6 text-body-color duration-300 hover:text-green"
         >
-          <FaInstagram />
-        </Link>
-        <Link
-          href="https://chat.whatsapp.com/BTGfLwVBqTJ3A1LQcA4iqS"
-          aria-label="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-6 text-body-color duration-300 hover:text-green"
-        >
-          <IoLogoWhatsapp />
-        </Link>
-        <Link
-          href="https://t.me/lex_fori"
-          aria-label="social-link"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="mr-6 text-body-color duration-300 hover:text-green"
-        >
-          <FaTelegramPlane />
+          <FaLinkedin className="mt-1 mr-1" />
+          Visit Our LinkedIn
         </Link>
       </div>
       {/* mail and phone */}
