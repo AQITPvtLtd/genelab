@@ -7,15 +7,15 @@ const page = () => {
   return (
     <div className="mt-[190px]">
       <div>
-        <div className="flex justify-around">
+        <div className="lg:flex justify-around">
           <Image
             src="/aboutus2.png"
             width={550}
             height={100}
             alt="about"
-            className="h-[400px] w-[550px] animate__animated animate__slideInLeft"
+            className="lg:h-[400px] w-[550px] animate__animated animate__slideInLeft"
           />
-          <div className="mx-10">
+          <div className="mx-10 lg:mt-0 mt-4">
             <div className="mb-10 font-bold text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
               <h1>ABOUT GENELAB</h1>
             </div>

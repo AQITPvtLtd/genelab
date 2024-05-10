@@ -31,7 +31,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     First Name
                   </label>
@@ -46,7 +46,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Last Name
                   </label>
@@ -61,7 +61,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Username
                   </label>
@@ -76,7 +76,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Email address
                   </label>
@@ -93,7 +93,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Address
                   </label>
@@ -108,7 +108,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     City
                   </label>
@@ -123,7 +123,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Country
                   </label>
@@ -138,7 +138,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     Postal Code
                   </label>
@@ -156,7 +156,7 @@ const Contact = () => {
                 <div className="relative w-full mb-3">
                   <label
                     className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
-                    htmlfor="grid-password"
+                    htmlFor="grid-password"
                   >
                     How Can We Help ?
                   </label>

@@ -13,7 +13,7 @@ const page = () => {
             width={550}
             height={100}
             alt="who"
-            className="h-[400px] w-[300px] lg:w-[550px] animate__animated animate__slideInLeft"
+            className="h-[400px] lg:w-[300px] lg:w-[550px] animate__animated animate__slideInLeft"
           />
           <div className="mx-10">
             <div className="mb-10 font-bold text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
