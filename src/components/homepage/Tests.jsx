@@ -4,7 +4,7 @@ import Link from "next/link";
 import { tests } from "@/app/tests/tests";
 
 const Tests = () => {
-  const t = tests.slice(0, 3);
+  const t = tests.slice(0, 6);
 
   return (
     <div className="overflow-x-clip">
@@ -19,7 +19,7 @@ const Tests = () => {
         <div className="absolute inset-0 mt-24">
           <div className="flex justify-center mb-10 text-center">
             <div className="text-5xl font-bold bg-gradient-to-r from-darkgreen inline-block to-blue text-transparent bg-clip-text">
-              EXPLORE OUR RANGE OF TESTS
+              MOST COMMON CANCER TESTING
             </div>
           </div>
           <div className="bg-white lg:bg-transparent lg:grid grid-cols-3 gap-8 lg:mx-10 mx-3">

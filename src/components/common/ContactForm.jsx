@@ -2,8 +2,10 @@
 
 import { sendFormData } from "@/services/formData";
 import React, { useState } from "react";
-import { toast } from "react-toastify";
+import { useRouter } from "next/navigation";
+import toast from "react-hot-toast";
 const ContactForm = () => {
+  const router = useRouter();
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -18,13 +20,14 @@ const ContactForm = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(formData);
-    if (!file) {
-      console.log("No File");
-    }
-    const fd = new FormData();
-    fd.set("file", file);
-    const response = await sendFormData({ formData, file });
+    if (!file) return;
+    const fileData = new FormData();
+    fileData.append("myFile", file);
+    // Append other form data fields to fileData
+    Object.entries(formData).forEach(([key, value]) => {
+      fileData.append(key, value);
+    });
+    const response = await sendFormData(fileData);
     if (response.success) {
       toast.success(response.message, {
         position: "bottom-left",
@@ -43,7 +46,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 First Name
@@ -60,7 +63,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 Last Name
@@ -77,7 +80,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 Phone Number
@@ -94,7 +97,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-6/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 Email address
@@ -113,7 +116,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-12/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 Upload Prescription
@@ -123,8 +126,12 @@ const ContactForm = () => {
                 id="myFile"
                 name="prescription"
                 accept="image/*, .pdf"
-                onChange={(e) => {
-                  setFile(e.target.files?.[0]);
+                onChange={({ target }) => {
+                  if (target.files) {
+                    const file = target.files[0];
+
+                    setFile(file);
+                  }
                 }}
               />
             </div>
@@ -134,7 +141,7 @@ const ContactForm = () => {
           <div className="w-full lg:w-12/12 px-4">
             <div className="relative w-full mb-3">
               <label
-                className="block uppercase text-blueGray-600 text-xs font-bold mb-2"
+                className="block uppercase text-blueGray-600 text-lg font-bold mb-2"
                 htmlFor="grid-password"
               >
                 How Can We Help ?

@@ -13,7 +13,7 @@ const Top = () => {
       {/* social links */}
       <div className="flex justify-center lg:mb-0 mb-2 items-center">
         <Link
-          href="https://www.instagram.com/lex__fori_?igshid=OGQ5ZDc2ODk2ZA==                    "
+          href="https://www.linkedin.com/company/102062131/admin/feed/posts/                    "
           aria-label="social-link"
           target="_blank"
           rel="noopener noreferrer"

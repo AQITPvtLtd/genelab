@@ -5,6 +5,7 @@ import React from "react";
 import Tests from "@/components/homepage/Tests";
 import Contact from "@/components/homepage/Contact";
 import Book from "@/components/homepage/Book";
+import Choose from "@/components/homepage/Choose";
 const page = () => {
   return (
     <div>
@@ -12,6 +13,7 @@ const page = () => {
       <Section1 />
       <Privacy />
       <Tests />
+      <Choose />
       <Contact />
       <Book />
     </div>

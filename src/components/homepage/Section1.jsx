@@ -7,7 +7,7 @@ import ScrollTrigger from "react-scroll-trigger";
 const Section1 = () => {
   const [animate, setAnimate] = useState(false);
   return (
-    <div className=" overflow-x-clip lg:mt-0 mt-[900px]">
+    <div className=" overflow-x-clip lg:mt-0 mt-[50px]">
       <ScrollTrigger
         onEnter={() => setAnimate(true)}
         onExit={() => setAnimate(false)}
@@ -17,48 +17,49 @@ const Section1 = () => {
             src="/section1.png"
             width={10000}
             height={1000}
-            className="lg:h-full w-full object-cover h-[400px]"
+            className="lg:h-full w-full object-cover h-[600px]"
             alt="section1"
           />
 
           <div className={`absolute inset-0 lg:grid grid-cols-12 grid-rows-8 `}>
             <h1
-              className={`flex justify-center col-start-4 row-start-3 col-span-4 bg-gradient-to-r from-blue to-darkgreen lg:inline-block text-transparent bg-clip-text text-5xl lg:text-7xl font-bold ${
+              className={`flex justify-center col-start-4 row-start-3 col-span-5 bg-gradient-to-r from-blue to-darkgreen lg:inline-block text-transparent bg-clip-text text-5xl lg:text-7xl font-bold ${
                 animate && "animate__animated animate__slideInLeft"
               }`}
             >
-              UNLOCKING
+              WELCOME
             </h1>
             <h1
-              className={`flex justify-center text-5xl lg:text-7xl col-span-4 col-start-5 row-start-4 font-bold bg-gradient-to-r from-blue lg:inline-block to-darkgreen text-transparent bg-clip-text ${
+              className={`flex justify-center col-start-5 row-start-4 col-span-5 bg-gradient-to-r from-blue to-darkgreen lg:inline-block text-transparent bg-clip-text text-5xl lg:text-7xl font-bold ${
+                animate && "animate__animated animate__slideInLeft"
+              }`}
+            >
+              TO
+            </h1>
+            <h1
+              className={`flex justify-center text-5xl lg:text-7xl col-span-4 col-start-6 ml-2 row-start-4 font-bold bg-gradient-to-r from-blue lg:inline-block to-darkgreen text-transparent bg-clip-text ${
+                animate && "animate__animated animate__slideInLeft"
+              }`}
+            >
+              GENELAB
+            </h1>
+            <h1
+              className={`lg:mt-0 lg:ml-0 mt-3 ml-2 flex justify-center row-start-5 col-span-4 col-start-6 text-3xl lg:text-4xl font-bold bg-gradient-to-r from-blue lg:inline-block to-darkgreen text-transparent bg-clip-text ${
                 animate && "animate__animated animate__slideInRight"
               }`}
             >
-              GENETIC
-            </h1>
-            <h1
-              className={`flex justify-center row-start-4 col-span-4 lg:ml-4 col-start-8 text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue lg:inline-block to-darkgreen text-transparent bg-clip-text ${
-                animate && "animate__animated animate__slideInRight"
-              }`}
-            >
-              POTENTIAL
-            </h1>
-            <h1
-              className={`flex justify-center row-start-5 col-span-4 col-start-6 text-5xl lg:text-7xl font-bold bg-gradient-to-r from-blue lg:inline-block to-darkgreen text-transparent bg-clip-text ${
-                animate && "animate__animated animate__slideInRight"
-              }`}
-            >
-              TOGETHER
+              YOUR PREMIER GENETIC TESTING LABORATORY
             </h1>
             <p
-              className={`bg-white bg-opacity-50 font-bold flex justify-center lg:mx-0 mx-5 text-center lg:mt-0 mt-4 lg:font-semibold col-span-4 row-start-6 col-start-6 ${
+              className={`bg-white bg-opacity-50 font-bold flex justify-center lg:mx-0 mx-5 lg:mt-4 mt-4 lg:font-semibold col-span-4 row-start-6 col-start-6 ${
                 animate && "animate__animated animate__slideInUp"
               }`}
             >
-              And you should be able to access, understand and benefit from the
-              endlessly interesting and diverse things your genetics can tell
-              you. How you choose to explore your DNA is up to you. With that
-              welcome to this extra-ordinary journey”
+              At GeneLab, we are dedicated to revolutionizing healthcare through
+              cutting-edge genetic testing solutions. Our mission is to empower
+              individuals, healthcare providers, and researchers with
+              comprehensive insights into genetic predispositions, disease
+              risks, and personalized treatment options.
             </p>
           </div>
         </div>

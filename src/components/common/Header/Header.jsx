@@ -3,11 +3,14 @@
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useContext } from "react";
+import UserContext from "@/context/UserContext";
 import menuData from "./menuData";
 import Top from "./Top";
 
 const Header = () => {
+  const context = useContext(UserContext);
+  console.log(context);
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {
@@ -55,9 +58,9 @@ const Header = () => {
       }`}
     >
       <Top />
-      <header className="flex justify-around">
+      <header className="flex">
         <div className="">
-          <div className="relative flex">
+          <div className="relative flex w-screen justify-between">
             {/*logo*/}
             <div className="lg:w-[300px] w-[340px] lg:px-4 xl:mr-12">
               <Link
@@ -75,7 +78,7 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="flex w-full items-center px-4">
+            <div className="flex items-center w-screen px-4 lg:ml-[150px]">
               <div>
                 {/* hamburger */}
                 <button
@@ -117,20 +120,29 @@ const Header = () => {
                               handleSubmenu(menuItem.id);
                               handleSubSubmenu(menuItem.submenu.id);
                             }}
-                            href={menuItem.path}
-                            className={`flex py-2 text-base lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
+                            href={
+                              context?.user && menuItem.id == 10
+                                ? "/admin/edit"
+                                : menuItem.path
+                            }
+                            className={`flex py-2 text-lg lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
                               usePathName === menuItem.path
                                 ? "text-primary"
                                 : "text-dark hover:text-primary"
+                            } ${
+                              menuItem.id == 10 &&
+                              "lg:text-blue lg:font-bold lg:ml-20 lg:py-0 lg:px-4"
                             }`}
                           >
-                            {menuItem.title}
+                            {context?.user && menuItem.id == 10
+                              ? "Edit"
+                              : menuItem.title}
                           </Link>
                         ) : (
                           <>
                             <p
                               onClick={() => handleSubmenu(menuItem.id)}
-                              className="flex cursor-pointer items-center justify-between py-2 text-base text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
+                              className="flex cursor-pointer items-center justify-between py-2 text-lg text-dark group-hover:text-primary lg:mr-0 lg:inline-flex lg:px-0 lg:py-6"
                             >
                               {menuItem.title}
                               <span className="">

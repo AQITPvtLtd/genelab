@@ -17,14 +17,14 @@ const Book = () => {
           <div className="col-span-4 col-start-3">
             <div className="flex justify-center mb-3">
               <div className=" text-5xl font-bold  bg-gradient-to-r from-blue inline-block to-darkgreen mt-10 text-transparent bg-clip-text">
-                REACH OUT TO US
+                GET YOUR TESTS DONE
               </div>
             </div>
             <p className="flex justify-center lg:text-center">
               With cutting-edge technology and experienced geneticists, we offer
               accurate and personalized genetic testing services
             </p>
-            <Link href="/">
+            <Link href="https://wa.link/z7ub10" target="__blank">
               <div className="text-center animate__animated animate__pulse animate__infinite animate__slower shadow-xl flex justify-center bg-blue text-white rounded-xl p-3 mt-3 text-xl font-bold">
                 Book An Appointment Now
               </div>

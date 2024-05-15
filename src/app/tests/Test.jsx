@@ -1,15 +1,134 @@
-import React from "react";
+"use client";
+
+import React, { useState, useContext, useEffect } from "react";
 import { tests } from "./tests";
 import Image from "next/image";
 import Link from "next/link";
-const Test = () => {
+import { useRouter } from "next/navigation";
+import UserContext from "@/context/UserContext";
+const Test = ({ mail }) => {
+  const router = useRouter();
+  const context = useContext(UserContext);
+  const m = context?.user?.email;
+
+  const [inputSearch, setInputSearch] = useState("");
+  const [isNameEmpty, setIsNameEmpty] = useState(false);
+  const [file, setFile] = useState(null);
+  const [formData, setFormData] = useState({
+    name: "",
+    description: "",
+    image: 0,
+  });
+  const handleSearch = (e) => {
+    setInputSearch(e.target.value);
+  };
+  let filteredData = tests;
+
+  if (inputSearch.trim() !== "") {
+    filteredData = tests.filter((d) =>
+      d.title.toLowerCase().includes(inputSearch.toLowerCase())
+    );
+  }
+
+  const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+    setSelectedFile((prevFiles) => [...prevFiles, file.name]);
+  };
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+  const handleSubmit = () => {};
   return (
     <div className="mt-[220px] lg:mt-[190px]">
+      {m != undefined && m === mail && (
+        <form onSubmit={handleSubmit} className="mx-20">
+          {/* name */}
+          <div className="mb-8">
+            <label
+              htmlFor="name"
+              className="mb-3 text-golden block text-sm text-dark"
+            >
+              Name of Test
+            </label>
+            <input
+              type="text"
+              name="name"
+              placeholder="Enter title of test"
+              className="border-stroke w-full rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none transition-all duration-300 focus:border-primary"
+              value={formData.name}
+              onChange={handleChange}
+            />
+            {isNameEmpty && (
+              <p className="text-sm text-red-600">Name Cant be empty</p>
+            )}
+          </div>
+          {/* description */}
+          <div className="mb-8">
+            <label
+              htmlFor="description"
+              className="mb-3 block text-sm font-medium text-dark"
+            >
+              Description
+            </label>
+            <textarea
+              name="description"
+              rows={5}
+              placeholder="Enter Description"
+              className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
+              value={formData.message}
+              onChange={handleChange}
+              required
+            ></textarea>
+          </div>
+          <div className="mb-8">
+            <label
+              htmlFor="image"
+              className="mb-3 block text-golden text-sm text-dark"
+            >
+              Image
+            </label>
+            <input
+              type="file"
+              id="myFile"
+              name="image"
+              accept="image/*"
+              onChange={({ target }) => {
+                if (target.files) {
+                  const file = target.files[0];
+
+                  setFile(file);
+                }
+              }}
+            />
+          </div>
+          <div className="mb-6">
+            <button className="hover:bg-blue/90 flex w-full items-center justify-center rounded-sm bg-blue px-9 py-4 text-base font-medium text-white shadow-submit duration-300">
+              Fill Test
+            </button>
+          </div>
+        </form>
+      )}
+
       <div className="mb-10 font-bold text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
         <h1>FIND TESTS</h1>
       </div>
+      {/* search */}
+      <div className="w-full">
+        <div className="w-[80%] mx-auto text-black">
+          <div className="w-full mb-10">
+            <div className="flex justify-center items-center">
+              <input
+                type="text"
+                placeholder="search tests by title..."
+                onChange={handleSearch}
+                className="w-full text-md font-semibold px-4 py-3 text-black my-4 border-gray-700 bg-gray-100 shadow-lg outline-none"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="lg:grid grid-cols-3 gap-4 mx-6">
-        {tests.map((t) => (
+        {filteredData.map((t) => (
           <Link
             href={`tests/${t.id}`}
             key={t.id}
