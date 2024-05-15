@@ -25,11 +25,11 @@ const Top = () => {
       </div>
       {/* mail and phone */}
       <div className="lg:flex justify-evenly">
-        <div className="flex justify-center lg:mb-0 mb-2 mr-10 ">
+        <div className="flex justify-center lg:mb-0 mb-2 mr-10 lg:ml-0 ml-5">
           <FaPhoneAlt className="mt-1 mr-1" />
           +91-981 172 4700
         </div>
-        <div className="flex justify-center lg:mb-0 mb-2">
+        <div className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-3">
           <IoMail className="mt-1 mr-1" />
           info@genelab.com
         </div>

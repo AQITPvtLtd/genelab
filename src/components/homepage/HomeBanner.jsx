@@ -12,7 +12,7 @@ const HomeBanner = () => {
   const videoRef = useRef(null);
   const [animate, setAnimate] = useState(false);
   return (
-    <div className="overflow-x-clip">
+    <div className="overflow-x-clip lg:mt-0 mt-[200px]">
       <div className="relative">
         <video
           ref={videoRef}
@@ -28,7 +28,7 @@ const HomeBanner = () => {
 
         {/* <div className="absolute inset-0 bg-white bg-opacity-60 opacity-30 z-20"></div> */}
 
-        <div className=" absolute inset-0 lg:mt-[240px] mt-[50px] lg:ml-0 ml-5">
+        <div className=" absolute inset-0 lg:mt-[240px] mt-[15px] lg:ml-0 ml-5">
           <ScrollTrigger
             onEnter={() => setAnimate(true)}
             onExit={() => setAnimate(false)}
@@ -39,7 +39,7 @@ const HomeBanner = () => {
               }`}
             >
               <h1
-                className={`font-bold text-6xl flex justify-center text-white text-center`}
+                className={`font-bold lg:text-6xl text-2xl flex justify-center text-white text-center`}
               >
                 YOUR PREMIER
                 <br /> GENETIC TESTING LABORATORY
@@ -48,7 +48,7 @@ const HomeBanner = () => {
             <div
               className={`${animate && "animate__animated animate__slideInUp"}`}
             >
-              <h2 className="font-semibold text-4xl flex justify-center text-white text-center mt-10">
+              <h2 className="font-semibold lg:text-4xl text-lg flex justify-center text-white text-center lg:mt-10">
                 Personalized genetic testing <br /> transforming lives and
                 healthcare globally
               </h2>

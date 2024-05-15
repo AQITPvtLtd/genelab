@@ -3,7 +3,7 @@
 import { sendFormData } from "@/services/formData";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 const ContactForm = () => {
   const router = useRouter();
   const [file, setFile] = useState(null);

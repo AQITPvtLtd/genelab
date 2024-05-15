@@ -10,7 +10,6 @@ import Top from "./Top";
 
 const Header = () => {
   const context = useContext(UserContext);
-  console.log(context);
   // Navbar toggle
   const [navbarOpen, setNavbarOpen] = useState(false);
   const navbarToggleHandler = () => {

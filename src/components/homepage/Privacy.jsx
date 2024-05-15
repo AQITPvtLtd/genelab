@@ -15,7 +15,7 @@ const Privacy = () => {
         />
         <div className="absolute inset-0 lg:grid grid-cols-2">
           <div className="border-2 border-white rounded-xl lg:m-20 m-10 p-10 shadow-white shadow-lg animate__animated animate__pulse animate__infinite animate__slower">
-            <Image src="/who/2.png" width={100} height={100} />
+            <Image src="/who/2.png" width={100} height={100} alt="mission" />
             <div className="text-white font-bold text-2xl">Our Mission</div>
             <p className="text-white text-lg">
               Genelab empowers with precise genetic insights, advancing
@@ -23,7 +23,7 @@ const Privacy = () => {
             </p>
           </div>
           <div className="border-2 border-white rounded-xl lg:m-20 m-10 p-10 shadow-white shadow-lg animate__animated animate__pulse animate__infinite animate__slower">
-            <Image src="/who/1.png" width={100} height={100} />
+            <Image src="/who/1.png" width={100} height={100} alt="vision" />
             <div className="text-white font-bold text-2xl">Our Vision</div>
             <p className="text-white text-lg">
               Genelab envisions a future where personalized genetic testing
