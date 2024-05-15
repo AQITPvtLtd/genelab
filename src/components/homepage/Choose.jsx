@@ -3,7 +3,7 @@ import Image from "next/image";
 const Choose = () => {
   return (
     <div>
-      <div className="mt-[300px]">
+      <div className="lg:mt-[300px] mt-[1100px]">
         <div className="mb-10 font-bold text-4xl lg:text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
           <h1>WHY CHOOSE US ?</h1>
         </div>
