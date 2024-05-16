@@ -13,7 +13,7 @@ const Top = () => {
       {/* social links */}
       <div className="flex justify-center lg:mb-0 mb-2 items-center">
         <Link
-          href="https://www.linkedin.com/company/102062131/admin/feed/posts/                    "
+          href="https://www.linkedin.com/company/102062131/admin/feed/posts/"
           aria-label="social-link"
           target="_blank"
           rel="noopener noreferrer"
@@ -25,14 +25,20 @@ const Top = () => {
       </div>
       {/* mail and phone */}
       <div className="lg:flex justify-evenly">
-        <div className="flex justify-center lg:mb-0 mb-2 mr-10 lg:ml-0 ml-5">
+        <Link
+          href="tel:+91-981 172 4700"
+          className="flex justify-center lg:mb-0 mb-2 mr-10 lg:ml-0 ml-5 hover:text-green"
+        >
           <FaPhoneAlt className="mt-1 mr-1" />
           +91-981 172 4700
-        </div>
-        <div className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-3">
+        </Link>
+        <Link
+          href="mailto:info@genelab.com"
+          className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-3 hover:text-green"
+        >
           <IoMail className="mt-1 mr-1" />
           info@genelab.com
-        </div>
+        </Link>
       </div>
     </div>
   );

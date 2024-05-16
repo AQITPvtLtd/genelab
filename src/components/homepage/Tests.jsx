@@ -3,7 +3,6 @@
 import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { tests } from "@/app/tests/tests";
 import { getAllTests } from "@/services/tests";
 
 const Tests = () => {
@@ -13,10 +12,8 @@ const Tests = () => {
       try {
         const response = await getAllTests();
         setTests(response.result);
-        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false); // Set loading to false on error as well
       }
     };
     fetchData();

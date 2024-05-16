@@ -13,3 +13,10 @@ export async function login(loginData) {
     .then((response) => response.data);
   return result;
 }
+
+export async function logout() {
+  const result = await httpAxios
+    .post("/api/logout")
+    .then((response) => response.data);
+  return result;
+}

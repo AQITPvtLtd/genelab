@@ -7,6 +7,7 @@ import { useEffect, useState, useContext } from "react";
 import UserContext from "@/context/UserContext";
 import menuData from "./menuData";
 import Top from "./Top";
+import { logout } from "@/services/user";
 
 const Header = () => {
   const context = useContext(UserContext);
@@ -28,7 +29,15 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
-
+  const handleLogout = async () => {
+    try {
+      await logout();
+      context.setUser(undefined);
+      router.push("/login");
+    } catch (error) {
+      console.log(error);
+    }
+  };
   // submenu handler
   const [openIndex, setOpenIndex] = useState(-1);
   const [openSubIndex, setSubOpenIndex] = useState(-1);
@@ -231,6 +240,15 @@ const Header = () => {
                         )}
                       </li>
                     ))}
+                    {context.user && (
+                      <Link
+                        onClick={handleLogout}
+                        className="mt-6 text-lg hover:text-blue"
+                        href={"/"}
+                      >
+                        Logout
+                      </Link>
+                    )}
                   </ul>
                 </nav>
               </div>

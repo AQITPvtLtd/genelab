@@ -6,17 +6,14 @@ import { getAllTests } from "@/services/tests";
 
 const Detailed = ({ id }) => {
   const [tests, setTests] = useState([]);
-  const [loading, setLoading] = useState(true); // Added loading state
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await getAllTests();
         setTests(response.result);
-        setLoading(false); // Set loading to false after data is fetched
       } catch (error) {
         console.error("Error fetching data:", error);
-        setLoading(false); // Set loading to false on error as well
       }
     };
     fetchData();
