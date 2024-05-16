@@ -1,5 +1,5 @@
-import connection from "@/helper/db";
-import { jwt } from "jsonwebtoken";
+import connection from "../../../helper/db";
+import jwt from "jsonwebtoken";
 import { NextResponse } from "next/server";
 export async function GET(request) {
   const authToken = request.cookies.get("authToken")?.value;

@@ -19,7 +19,7 @@ const Edit = ({ mail }) => {
   return (
     <div>
       <div className="grid grid-cols-3 mx-10">
-        <Link href="/admin/edit/tests">
+        <Link href="/tests">
           <div className="border border-blue rounded-xl p-3">Add Tests</div>
         </Link>
       </div>

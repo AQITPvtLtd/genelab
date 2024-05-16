@@ -2,15 +2,16 @@
 
 import React, { useEffect, useState } from "react";
 import UserContext from "./UserContext";
-import { currentUser } from "../services/user";
+import { currentUser } from "@/services/user";
 
 const UserProvider = ({ children }) => {
   const [user, setUser] = useState(undefined);
   useEffect(() => {
+    // console.log("Starting....");
     async function load() {
       try {
-        const authToken = localStorage.getItem("authToken");
-        const logUser = await currentUser(authToken);
+        const logUser = await currentUser();
+        // console.log("logUser: ", logUser);
         setUser({ ...logUser });
       } catch (error) {
         setUser(undefined);

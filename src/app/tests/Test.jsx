@@ -1,23 +1,31 @@
 "use client";
 
 import React, { useState, useContext, useEffect } from "react";
-import { tests } from "./tests";
 import Image from "next/image";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import UserContext from "@/context/UserContext";
+import { addTest } from "@/services/formData";
+import { toast } from "react-toastify";
+import swal from "sweetalert";
+import { getAllTests } from "@/services/tests";
+
 const Test = ({ mail }) => {
-  const router = useRouter();
   const context = useContext(UserContext);
   const m = context?.user?.email;
-
+  const [tests, setTests] = useState([]);
+  useEffect(() => {
+    const t = async () => {
+      const x = await getAllTests();
+      setTests(x.result);
+    };
+    t();
+  }, []);
   const [inputSearch, setInputSearch] = useState("");
   const [isNameEmpty, setIsNameEmpty] = useState(false);
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
     name: "",
     description: "",
-    image: 0,
   });
   const handleSearch = (e) => {
     setInputSearch(e.target.value);
@@ -30,14 +38,35 @@ const Test = ({ mail }) => {
     );
   }
 
-  const handleFileChange = async (event) => {
-    const file = event.target.files[0];
-    setSelectedFile((prevFiles) => [...prevFiles, file.name]);
-  };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
-  const handleSubmit = () => {};
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    if (!file) return;
+    const fileData = new FormData();
+    fileData.append("myFile", file);
+    // Append other form data fields to fileData
+    Object.entries(formData).forEach(([key, value]) => {
+      fileData.append(key, value);
+    });
+    const response = await addTest(fileData);
+    if (response.success) {
+      setFormData({
+        name: "",
+        description: "",
+      });
+      swal({
+        title: "Done",
+        text: "Test Added",
+        icon: "success",
+      });
+    } else {
+      toast.error(response.message, {
+        position: "bottom-left",
+      });
+    }
+  };
   return (
     <div className="mt-[220px] lg:mt-[190px]">
       {m != undefined && m === mail && (
@@ -75,7 +104,7 @@ const Test = ({ mail }) => {
               rows={5}
               placeholder="Enter Description"
               className="border-stroke w-full resize-none rounded-sm border bg-[#f8f8f8] px-6 py-3 text-base text-body-color outline-none focus:border-primary"
-              value={formData.message}
+              value={formData.description}
               onChange={handleChange}
               required
             ></textarea>
@@ -135,14 +164,14 @@ const Test = ({ mail }) => {
             className="lg:border-2 lg:border-gray-400 rounded-xl hover:bg-black/10"
           >
             <Image
-              src={`/tests/${t.img}`}
+              src={`/tests/${t.image}`}
               width={2000}
               height={1000}
               alt="tests"
               className="rounded-t-xl w-full h-[200px]"
             />
             <div className="text-center font-bold text-xl mt-2 text-blue">
-              {t.title}
+              {t.name}
             </div>
             <div className="px-3 pt-3 mb-2 line-clamp-3 text-gray-600">
               {t.content}
