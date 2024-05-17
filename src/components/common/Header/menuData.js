@@ -34,7 +34,7 @@ const menuData = [
     id: 4,
     title: "Article",
     newTab: false,
-    path: "/article",
+    path: "/articles",
   },
   {
     id: 8,

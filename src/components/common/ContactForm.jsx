@@ -3,6 +3,7 @@
 import { sendFormData } from "@/services/formData";
 import React, { useState } from "react";
 import { useRouter } from "next/navigation";
+import swal from "sweetalert";
 // import toast from "react-hot-toast";
 const ContactForm = () => {
   const router = useRouter();
@@ -29,10 +30,15 @@ const ContactForm = () => {
     });
     const response = await sendFormData(fileData);
     if (response.success) {
-      toast.success(response.message, {
-        position: "bottom-left",
+      setFormData({
+        name: "",
+        description: "",
       });
-      router.push("/");
+      swal({
+        title: "Done",
+        text: "Enquiry sent",
+        icon: "success",
+      });
     } else {
       toast.error(response.message, {
         position: "bottom-left",

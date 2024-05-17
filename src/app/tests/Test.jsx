@@ -31,10 +31,9 @@ const Test = ({ mail }) => {
     setInputSearch(e.target.value);
   };
   let filteredData = tests;
-
   if (inputSearch.trim() !== "") {
     filteredData = tests.filter((d) =>
-      d.title.toLowerCase().includes(inputSearch.toLowerCase())
+      d.name.toLowerCase().includes(inputSearch.toLowerCase())
     );
   }
 

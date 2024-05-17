@@ -7,7 +7,7 @@ const Choose = () => {
         <div className="mb-10 font-bold text-4xl lg:text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
           <h1>WHY CHOOSE US ?</h1>
         </div>
-        <div className="lg:grid grid-cols-3 gap-3 mx-10">
+        <div className="lg:grid grid-cols-2 gap-3 mx-10">
           <div className="border-2 text-gray-700 p-3 rounded-xl">
             <div className="flex justify-center">
               <Image src="/who/6.png" width={100} height={100} alt="who" />
@@ -64,34 +64,6 @@ const Choose = () => {
                 We prioritize the confidentiality and security of genetic
                 information, adhering to strict data protection protocols to
                 ensure client privacy.
-              </p>
-            </div>
-          </div>
-          <div className="border-2 text-gray-700 p-3 rounded-xl">
-            <div className="flex justify-center">
-              <Image src="/who/2.png" width={100} height={100} alt="who" />
-            </div>
-            <div className="">
-              <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
-                Mission
-              </h3>
-              <p className="p-2 font-bold">
-                Genelab empowers with precise genetic insights, advancing
-                healthcare and research.
-              </p>
-            </div>
-          </div>
-          <div className="border-2 text-gray-700 p-3 rounded-xl">
-            <div className="flex justify-center">
-              <Image src="/who/1.png" width={100} height={100} alt="who" />
-            </div>
-            <div className="">
-              <h3 className=" text-blue p-2 font-semibold text-xl flex justify-center">
-                Vision
-              </h3>
-              <p className="p-2 font-bold">
-                Genelab envisions a future where personalized genetic testing
-                transforms lives and healthcare globally
               </p>
             </div>
           </div>
