@@ -36,7 +36,7 @@ const Tests = () => {
               MOST COMMON CANCER TESTING
             </div>
           </div>
-          <div className="bg-white lg:bg-transparent lg:grid grid-cols-3 gap-8 lg:mx-10 mx-3">
+          <div className="bg-white lg:bg-transparent grid lg:grid-cols-3 md:grid-cols-2 gap-8 lg:mx-10 mx-3">
             {t.map((t) => (
               <Link
                 href={`tests/${t.id}`}
