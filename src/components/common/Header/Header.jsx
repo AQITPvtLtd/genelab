@@ -8,6 +8,8 @@ import UserContext from "@/context/UserContext";
 import menuData from "./menuData";
 import Top from "./Top";
 import { logout } from "@/services/user";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { RxCross1 } from "react-icons/rx";
 
 const Header = () => {
   const context = useContext(UserContext);
@@ -93,23 +95,28 @@ const Header = () => {
                   onClick={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
-                  className="absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-[#321f05] focus:ring-2 lg:hidden"
+                  className="p-2 absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-[#321f05] focus:ring-2 lg:hidden"
                 >
-                  <span
+                  {/* <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
                       navbarOpen ? " top-[7px] rotate-45" : " "
                     }`}
+                  /> */}
+
+                  <RxHamburgerMenu
+                    className={` ${navbarOpen ? "hidden" : ""}`}
                   />
-                  <span
+                  <RxCross1 className={` ${navbarOpen ? "" : "hidden"}`} />
+                  {/* <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
                       navbarOpen ? "opacity-0 " : " "
                     }`}
-                  />
-                  <span
+                  /> */}
+                  {/* <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
                       navbarOpen ? " top-[-8px] -rotate-45" : " "
                     }`}
-                  />
+                  /> */}
                 </button>
                 <nav
                   id="navbarCollapse"
