@@ -44,7 +44,7 @@ const Section1 = () => {
               GENELAB
             </h1>
             <h1
-              className={`xl:mt-0 xl:ml-0 mt-3 ml-2 flex justify-center row-start-5 col-span-4 col-start-6 text-3xl xl:text-4xl font-bold bg-gradient-to-r from-blue xl:inline-block to-darkgreen text-transparent bg-clip-text ${
+              className={`xl:mt-0 xl:ml-0 mt-3 ml-2 flex justify-center row-start-5 col-span-4 col-start-6 text-3xl xl:text-3xl 2xl:text-4xl font-bold bg-gradient-to-r from-blue xl:inline-block to-darkgreen text-transparent bg-clip-text ${
                 animate && "animate__animated animate__slideInRight"
               }`}
             >
