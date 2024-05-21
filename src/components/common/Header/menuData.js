@@ -8,6 +8,7 @@ const menuData = [
   {
     id: 2,
     title: "About Us",
+    path: "/about/who-are-we",
     newTab: true,
     submenu: [
       {
