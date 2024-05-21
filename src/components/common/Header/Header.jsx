@@ -31,6 +31,7 @@ const Header = () => {
   useEffect(() => {
     window.addEventListener("scroll", handleStickyNavbar);
   });
+
   const handleLogout = async () => {
     try {
       await logout();
@@ -92,7 +93,7 @@ const Header = () => {
               <div>
                 {/* hamburger */}
                 <button
-                  onClick={navbarToggleHandler}
+                  onMouseDown={navbarToggleHandler}
                   id="navbarToggler"
                   aria-label="Mobile Menu"
                   className="p-2 absolute right-4 top-1/2 block translate-y-[-50%] rounded-lg px-3 py-[6px] ring-[#321f05] focus:ring-2 lg:hidden"
@@ -103,10 +104,8 @@ const Header = () => {
                     }`}
                   /> */}
 
-                  <RxHamburgerMenu
-                    className={` ${navbarOpen ? "hidden" : ""}`}
-                  />
-                  <RxCross1 className={` ${navbarOpen ? "" : "hidden"}`} />
+                  <RxHamburgerMenu />
+                  {/* <RxCross1 className={` ${navbarOpen ? "" : "hidden"}`} /> */}
                   {/* <span
                     className={`relative my-1.5 block h-0.5 w-[30px] bg-black transition-all duration-300 ${
                       navbarOpen ? "opacity-0 " : " "

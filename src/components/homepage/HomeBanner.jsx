@@ -48,7 +48,7 @@ const HomeBanner = () => {
             <div
               className={`${animate && "animate__animated animate__slideInUp"}`}
             >
-              <h2 className="font-semibold lg:text-4xl text-lg flex justify-center text-white text-center lg:mt-10">
+              <h2 className="font-semibold lg:text-4xl text-md flex justify-center text-white text-center lg:mt-10">
                 Personalized genetic testing <br /> transforming lives and
                 healthcare globally
               </h2>
