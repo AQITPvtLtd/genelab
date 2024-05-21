@@ -33,11 +33,11 @@ const Top = () => {
           +91-981 172 4700
         </Link>
         <Link
-          href="mailto:info@genelab.com"
+          href="mailto:info@genelab.in"
           className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-3 hover:text-green"
         >
           <IoMail className="mt-1 mr-1" />
-          info@genelab.com
+          info@genelab.in
         </Link>
       </div>
     </div>
