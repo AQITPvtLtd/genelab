@@ -86,7 +86,7 @@ const Header = () => {
                 />
               </Link>
             </div>
-            <div className="flex items-center w-screen px-4 lg:ml-[150px]">
+            <div className="flex items-center w-screen px-4 lg:ml-[120px]">
               <div>
                 {/* hamburger */}
                 <button
@@ -119,7 +119,7 @@ const Header = () => {
                       : "invisible top-[120%] opacity-0"
                   }`}
                 >
-                  <ul className="block lg:flex lg:space-x-4">
+                  <ul className="block lg:flex lg:space-x-8">
                     {menuData.map((menuItem, index) => (
                       <li key={index} className="group relative">
                         {menuItem.path ? (

@@ -48,11 +48,11 @@ const menuData = [
     newTab: false,
     path: "https://wa.link/z7ub10",
   },
-  {
-    id: 10,
-    title: "Admin",
-    newTab: false,
-    path: "/login",
-  },
+  // {
+  //   id: 10,
+  //   title: "Admin",
+  //   newTab: false,
+  //   path: "/login",
+  // },
 ];
 export default menuData;

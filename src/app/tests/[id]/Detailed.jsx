@@ -21,10 +21,6 @@ const Detailed = ({ id }) => {
 
   const obj = tests.find((t) => id == t.id);
 
-  if (loading) {
-    return <div>Loading...</div>; // Render loading indicator while fetching data
-  }
-
   if (!obj) {
     return <div>Test not found</div>; // Render message if test with specified ID is not found
   }
