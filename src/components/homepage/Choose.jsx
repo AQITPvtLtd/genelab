@@ -3,11 +3,11 @@ import Image from "next/image";
 const Choose = () => {
   return (
     <div>
-      <div className="xl:mt-[300px] lg:mt-[500px] md:mt-[0px] mt-[1100px]">
+      <div className="mt-[50px]">
         <div className="mb-10 font-bold text-4xl xl:text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
           <h1>WHY CHOOSE US ?</h1>
         </div>
-        <div className="xl:grid grid-cols-2 gap-3 mx-10 md:space-y-4 xl:space-y-0">
+        <div className="xl:grid grid-cols-2 gap-3 mx-10 md:space-y-4 xl:space-y-0 space-y-3">
           <div className="border-2 text-gray-700 p-3 rounded-xl">
             <div className="flex justify-center">
               <Image src="/who/6.png" width={100} height={100} alt="who" />

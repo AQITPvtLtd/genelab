@@ -16,7 +16,7 @@ const Book = () => {
           />
           <div className="col-span-4 col-start-3">
             <div className="flex justify-center mb-3">
-              <div className=" text-5xl font-bold  bg-gradient-to-r from-blue inline-block to-darkgreen mt-10 text-transparent bg-clip-text">
+              <div className=" text-4xl text-center font-bold  bg-gradient-to-r from-blue inline-block to-darkgreen mt-10 text-transparent bg-clip-text">
                 GET YOUR TESTS DONE
               </div>
             </div>

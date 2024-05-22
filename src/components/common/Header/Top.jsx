@@ -34,7 +34,7 @@ const Top = () => {
         </Link>
         <Link
           href="mailto:info@genelab.in"
-          className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-3 hover:text-green"
+          className="flex justify-center lg:mb-0 mb-2 lg:ml=0 -ml-9 hover:text-green"
         >
           <IoMail className="mt-1 mr-1" />
           info@genelab.in

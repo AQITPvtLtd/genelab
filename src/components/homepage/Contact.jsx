@@ -9,7 +9,7 @@ const Contact = () => {
         src="/darkbg.png"
         height={10000}
         width={10000}
-        className="w-full lg:h-[600px] h-[760px]"
+        className="w-full lg:h-[600px] h-[790px]"
         alt="bg"
       />
       <div className="absolute inset-0 flex-auto px-4 lg:px-10 py-10 pt-0 text-white">

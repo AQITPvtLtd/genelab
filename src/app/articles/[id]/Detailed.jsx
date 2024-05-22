@@ -30,7 +30,7 @@ const Detailed = ({ id }) => {
   }
 
   return (
-    <div className="mt-[190px]">
+    <div className="mt-[230px] lg:mt-[190px]">
       <div className="mb-4 lg:mx-4 font-bold text-4xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
         <h1 className="uppercase text-center">{obj.title}</h1>
       </div>
@@ -48,7 +48,7 @@ const Detailed = ({ id }) => {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-4">
+      <div className="lg:grid grid-cols-4">
         <div className="col-span-3">
           <Image
             src={`/blog/${obj.image}`}

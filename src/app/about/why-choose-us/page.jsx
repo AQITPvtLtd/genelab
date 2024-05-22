@@ -19,7 +19,7 @@ const page = () => {
             <div className="mb-10 font-bold text-4xl lg:text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
               <h1>WHY CHOOSE US ?</h1>
             </div>
-            <div className="lg:grid grid-cols-2 gap-3">
+            <div className="lg:grid grid-cols-2 gap-3 lg:space-y-0 space-y-3">
               <div className="border-2 text-gray-700 p-3 rounded-xl">
                 <div className="flex justify-center">
                   <Image src="/who/6.png" width={100} height={100} alt="who" />

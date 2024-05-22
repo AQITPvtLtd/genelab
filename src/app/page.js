@@ -6,6 +6,7 @@ import Tests from "@/components/homepage/Tests";
 import Contact from "@/components/homepage/Contact";
 import Book from "@/components/homepage/Book";
 import Choose from "@/components/homepage/Choose";
+import Articles from "@/components/homepage/Articles";
 const page = () => {
   return (
     <div>
@@ -13,6 +14,7 @@ const page = () => {
       <Section1 />
       <Privacy />
       <Tests />
+      <Articles />
       <Choose />
       <Contact />
       <Book />

@@ -32,7 +32,7 @@ const Tests = () => {
         />
         <div className="absolute inset-0 mt-24">
           <div className="flex justify-center mb-10 text-center">
-            <div className="text-5xl font-bold bg-gradient-to-r from-darkgreen inline-block to-blue text-transparent bg-clip-text">
+            <div className="text-4xl font-bold bg-gradient-to-r from-darkgreen inline-block to-blue text-transparent bg-clip-text">
               MOST COMMON CANCER TESTING
             </div>
           </div>
