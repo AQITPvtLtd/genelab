@@ -25,15 +25,15 @@ export const POST = async (req, res) => {
   const filename = Date.now() + file.name.replaceAll(" ", "_");
   // console.log(filename);
   try {
-    await writeFile(
-      path.join(process.cwd(), "public/prescriptions/" + filename),
-      buffer
-    );
+    // await writeFile(
+    //   path.join(process.cwd(), "public/prescriptions/" + filename),
+    //   buffer
+    // );
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
       connection.query(
         "INSERT INTO contact (id, first_name, last_name, phone, email, message, prescription) VALUES (?, ?, ?, ?, ?, ?, ?)",
-        [unique_id, firstName, lastName, email, phone, message, filename],
+        [unique_id, firstName, lastName, phone, email, message, "filename"],
         (err, results, fields) => {
           if (err) {
             console.log(err);
@@ -149,7 +149,7 @@ export const POST = async (req, res) => {
   } catch (error) {
     console.log("Error occured ", error);
     return NextResponse.json({
-      message: "Error in sending Enquiry",
+      message: "Error in sending Enquiry!!",
       success: false,
     });
   }
@@ -158,45 +158,45 @@ export const POST = async (req, res) => {
 const SCOPE = ["https://www.googleapis.com/auth/drive"];
 
 //authorize
-async function authorize() {
-  const jwtclient = new google.auth.JWT(
-    data.client_email,
-    null,
-    data.private_key,
-    SCOPE
-  );
-  await jwtclient.authorize();
-  return jwtclient;
-}
+// async function authorize() {
+//   const jwtclient = new google.auth.JWT(
+//     data.client_email,
+//     null,
+//     data.private_key,
+//     SCOPE
+//   );
+//   await jwtclient.authorize();
+//   return jwtclient;
+// }
 
-async function uploadFile(authClient, filename) {
-  return new Promise((resolve, rejected) => {
-    // file 1
-    const folderPath = path.join(
-      process.cwd(),
-      "public/prescriptions",
-      filename
-    );
-    const drive = google.drive({ version: "v3", auth: authClient });
-    var fileMetaData = {
-      name: filename,
-      parents: ["1TKJaMJa-Xse-weMUP6R0p-3MFimK-nlW"],
-    };
-    drive.files.create(
-      {
-        resource: fileMetaData,
-        media: {
-          body: fs.createReadStream(folderPath),
-          mimeType: "application/pdf image/*",
-        },
-        fields: "id",
-      },
-      function (err, file) {
-        if (err) {
-          return rejected(err);
-        }
-        resolve(file);
-      }
-    );
-  });
-}
+// async function uploadFile(authClient, filename) {
+//   return new Promise((resolve, rejected) => {
+//     // file 1
+//     const folderPath = path.join(
+//       process.cwd(),
+//       "public/prescriptions",
+//       filename
+//     );
+//     const drive = google.drive({ version: "v3", auth: authClient });
+//     var fileMetaData = {
+//       name: filename,
+//       parents: ["1TKJaMJa-Xse-weMUP6R0p-3MFimK-nlW"],
+//     };
+//     drive.files.create(
+//       {
+//         resource: fileMetaData,
+//         media: {
+//           body: fs.createReadStream(folderPath),
+//           mimeType: "application/pdf image/*",
+//         },
+//         fields: "id",
+//       },
+//       function (err, file) {
+//         if (err) {
+//           return rejected(err);
+//         }
+//         resolve(file);
+//       }
+//     );
+//   });
+// }
