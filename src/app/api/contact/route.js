@@ -32,8 +32,8 @@ export const POST = async (req, res) => {
       filename
     );
     // Ensure the directory exists
-    const dirPath = path.dirname(filePath);
-    await mkdir(dirPath, { recursive: true });
+    // const dirPath = path.dirname(filePath);
+    // await mkdir(dirPath, { recursive: true });
     // await writeFile(filePath, buffer);
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
