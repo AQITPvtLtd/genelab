@@ -144,7 +144,7 @@ export const POST = async (req, res) => {
   } catch (error) {
     console.log("Error occured ", error);
     return NextResponse.json({
-      message: error,
+      message: "Error in sending Enquiry",
       success: false,
     });
   }
