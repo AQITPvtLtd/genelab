@@ -65,12 +65,12 @@ export const POST = async (req, res) => {
         from: process.env.MY_EMAIL,
         to: process.env.MY_EMAIL,
         subject: "GeneLab Contact form",
-        // attachments: [
-        //   {
-        //     filename: filename,
-        //     path: path.join(process.cwd(), "public/prescriptions/" + filename),
-        //   },
-        // ],
+        attachments: [
+          {
+            filename: filename,
+            path: path.join(process.cwd(), "public/prescriptions/" + filename),
+          },
+        ],
         html: `<html lang="en">
             <head>
               <meta charset="utf-8">
@@ -140,16 +140,16 @@ export const POST = async (req, res) => {
       });
     }
     //send to google drive
-    // try {
-    //   const authClient = await authorize();
-    //   uploadFile(authClient, filename);
-    // } catch (error) {
-    //   console.log(error);
-    //   return NextResponse.json({
-    //     message: "Google Drive Error",
-    //     success: false,
-    //   });
-    // }
+    try {
+      const authClient = await authorize();
+      uploadFile(authClient, filename);
+    } catch (error) {
+      console.log(error);
+      return NextResponse.json({
+        message: "Google Drive Error",
+        success: false,
+      });
+    }
 
     return NextResponse.json({ message: "Enquiry sent", success: true });
   } catch (error) {
@@ -163,46 +163,46 @@ export const POST = async (req, res) => {
 
 const SCOPE = ["https://www.googleapis.com/auth/drive"];
 
-//authorize
-// async function authorize() {
-//   const jwtclient = new google.auth.JWT(
-//     data.client_email,
-//     null,
-//     data.private_key,
-//     SCOPE
-//   );
-//   await jwtclient.authorize();
-//   return jwtclient;
-// }
+authorize;
+async function authorize() {
+  const jwtclient = new google.auth.JWT(
+    data.client_email,
+    null,
+    data.private_key,
+    SCOPE
+  );
+  await jwtclient.authorize();
+  return jwtclient;
+}
 
-// async function uploadFile(authClient, filename) {
-//   return new Promise((resolve, rejected) => {
-//     // file 1
-//     const folderPath = path.join(
-//       process.cwd(),
-//       "public/prescriptions",
-//       filename
-//     );
-//     const drive = google.drive({ version: "v3", auth: authClient });
-//     var fileMetaData = {
-//       name: filename,
-//       parents: ["1TKJaMJa-Xse-weMUP6R0p-3MFimK-nlW"],
-//     };
-//     drive.files.create(
-//       {
-//         resource: fileMetaData,
-//         media: {
-//           body: fs.createReadStream(folderPath),
-//           mimeType: "application/pdf image/*",
-//         },
-//         fields: "id",
-//       },
-//       function (err, file) {
-//         if (err) {
-//           return rejected(err);
-//         }
-//         resolve(file);
-//       }
-//     );
-//   });
-// }
+async function uploadFile(authClient, filename) {
+  return new Promise((resolve, rejected) => {
+    // file 1
+    const folderPath = path.join(
+      process.cwd(),
+      "public/prescriptions",
+      filename
+    );
+    const drive = google.drive({ version: "v3", auth: authClient });
+    var fileMetaData = {
+      name: filename,
+      parents: ["1TKJaMJa-Xse-weMUP6R0p-3MFimK-nlW"],
+    };
+    drive.files.create(
+      {
+        resource: fileMetaData,
+        media: {
+          body: fs.createReadStream(folderPath),
+          mimeType: "application/pdf image/*",
+        },
+        fields: "id",
+      },
+      function (err, file) {
+        if (err) {
+          return rejected(err);
+        }
+        resolve(file);
+      }
+    );
+  });
+}
