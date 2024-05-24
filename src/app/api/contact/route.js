@@ -138,6 +138,10 @@ export const POST = async (req, res) => {
       uploadFile(authClient, filename);
     } catch (error) {
       console.log(error);
+      return NextResponse.json({
+        message: "Google Drive Error",
+        success: false,
+      });
     }
 
     return NextResponse.json({ message: "Enquiry sent", success: true });
