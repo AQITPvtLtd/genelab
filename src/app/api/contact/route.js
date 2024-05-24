@@ -31,7 +31,10 @@ export const POST = async (req, res) => {
       "prescriptions",
       filename
     );
-    await writeFile(filePath, buffer);
+    // await writeFile(filePath, buffer);
+    fs.writeFile(filePath, buffer, (err) => {
+      if (err) console.log(err);
+    });
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
       connection.query(
