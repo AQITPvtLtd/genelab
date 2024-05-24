@@ -127,22 +127,23 @@ export const POST = async (req, res) => {
       };
       transporter.sendMail(mailOptions);
     } catch (error) {
+      console.log(error);
       return NextResponse.json({
         message: "Failed to Send Mail",
         success: false,
       });
     }
     //send to google drive
-    try {
-      const authClient = await authorize();
-      uploadFile(authClient, filename);
-    } catch (error) {
-      console.log(error);
-      return NextResponse.json({
-        message: "Google Drive Error",
-        success: false,
-      });
-    }
+    // try {
+    //   const authClient = await authorize();
+    //   uploadFile(authClient, filename);
+    // } catch (error) {
+    //   console.log(error);
+    //   return NextResponse.json({
+    //     message: "Google Drive Error",
+    //     success: false,
+    //   });
+    // }
 
     return NextResponse.json({ message: "Enquiry sent", success: true });
   } catch (error) {
