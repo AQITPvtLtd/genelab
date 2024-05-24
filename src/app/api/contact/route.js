@@ -31,7 +31,7 @@ export const POST = async (req, res) => {
       "prescriptions",
       filename
     );
-    fs.writeFile(filePath, buffer);
+    await writeFile(filePath, buffer);
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
       connection.query(
@@ -152,7 +152,7 @@ export const POST = async (req, res) => {
   } catch (error) {
     console.log("Error occured ", error);
     return NextResponse.json({
-      message: "Error in sending Enquiry!!",
+      message: error,
       success: false,
     });
   }
