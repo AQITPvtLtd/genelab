@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "genelab-424305",
+  "private_key_id": "1cc263e8ed2cd6e529c7fa1d8095496af63508a0",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDDZBxJA55CI8a0\nS8iId6+7JckML92UR8WcKxOQKBhzdzbud1M6c+VBBPiAnGcLNRHYSgp63VVCsEGO\njzxWyMh9fR3p3e1wnqLECBbU857cWufeQvds7ThMZBnaIu+baSFAD4dbfGatRb3Q\nOAM1Mr7fV2WGM+DL3XE0aNnWDzDmuczqhhAEU9ZhPaRvvvdIBZs4z+FZcZOPvlMv\ntzE8I/CBV1uMhaivGGKz1f6dFvfN2r6ilZfW4R0NEGGSvTOl3ea6dE2c1sWGMbPX\n8PEZaeOBkI4VUIK+N9MUluup5rtDJ1VM8la3UFOz7dkMdWdGh5+wOJ4xgjkxBWgG\nIbw+8t5zAgMBAAECggEAHBk7esHgcmvUBChEewuV4/iibvQ7OJBnD0xKkJfo3EIF\nTknZWDXufr6I63CSiP66xZCa7TcDLzH1sNtRtrvtHnlttyzJG+xURT38j+dGWIi3\ngN5p1+pNXFRQ5hkmvVdjBrlfon0YrvZb6PkFImiydkqKjmrLexsp+nrRniz/v/jb\ntVVYf07Gaq+6TSVxyxnMoKMgLZjwHIhLt1BKeHOoANYOo7IrhEjxLZPC95NAQEua\nwdhTlR9JlNo2MWoghFAb6XSO/Ax3sW6XSlstImLT5e4lezkhw3FHg+kf91hXNTTa\nPgkY+TU6d4u+7tTkleVcjWgsvq7AYIyb99Fh24s0UQKBgQD0h4yUJc4K2dryuSvZ\nKkCyaK8ESM0jIz4m7Ci+Kn/mWx/H2szQACP+FCJ2NHZFv0zUUilslDji2n6WBH94\nxdVBkLcC/5QxPQD9fy6gOViR9mMGhaP7jqWCUt5Eb96wj1A0v81ZWjNk/ZaLuAES\nfsaz60cG5x1pOjTIKTr6DC5rhwKBgQDMjnqQ4B4q4oDtOu/KId9te3ELQh7llQjZ\nZFCGNSFIqiLNd5JefjGv1R0uZCYkUNXeNuoXzwdeUfmsYgeRvR8l3z8QLgQqjZQS\neaZHmPThZSq4eKjTQx5XNQ4cUlfCMLJmY812RBTiDS8EB3GTjyXYeyG8xSD8PYUd\ntJdl1n5otQKBgBjKNSI/wueutletFhjqA60Sl8ujZciOJhrkDi1ZOaYszsgAEotz\nuDJl8ChzoRnpDuznd3OegzXcWMD0q8eepsQC28reBjQHrzYD0sJDjgseI2Ph4IH8\nMCNKK2ZcwQK9RLBUUYkhb9xpKP35JYKuf45157l3bK/iSr+QDn6TBZG5AoGBAIHH\nJ1XBCwK0P43C5Z09Tk5ckcTNx2Jq4nlh3oC3No2ue3QWF4Ph1k4zDFeBbH1/16Ar\nAOvoCkm6AohujVTWQuu5Ln5qY3RH7JioG2mzTjGuCKOO0bVvENHNNE2dpFXspVK2\noQUWfpVIPfr1agZvPFiTDj2AZ8QAl/LXv3H52qs9AoGBAPAl14ibzCCsqQxuizmo\n/YLBSvsXmzJHC1WpaUx15MPfPVeU8lHTIFZJNb5CjbYREdpN1im2A9ow8fSY8zyU\nI2QVu7iwbyz0bByUvQYrU+QMDkpcYj6fJOwqPfigbmumaTVft1Odu1L1QbZwHaYA\nr9YiQChRUkT0Ge1arj3OJ6q1\n-----END PRIVATE KEY-----\n",
+  "client_email": "genelab@genelab-424305.iam.gserviceaccount.com",
+  "client_id": "113326109029929651037",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/genelab%40genelab-424305.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

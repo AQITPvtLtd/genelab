@@ -2,11 +2,9 @@
 
 import { sendFormData } from "@/services/formData";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
 import swal from "sweetalert";
 // import toast from "react-hot-toast";
 const ContactForm = () => {
-  const router = useRouter();
   const [file, setFile] = useState(null);
   const [formData, setFormData] = useState({
     firstName: "",
@@ -15,7 +13,12 @@ const ContactForm = () => {
     email: "",
     message: "",
   });
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
@@ -31,17 +34,23 @@ const ContactForm = () => {
     const response = await sendFormData(fileData);
     if (response.success) {
       setFormData({
-        name: "",
-        description: "",
+        firstName: "",
+        lastName: "",
+        phone: "",
+        email: "",
+        message: "",
       });
+      scrollToTop();
       swal({
         title: "Done",
-        text: "Enquiry sent",
+        text: response.message,
         icon: "success",
       });
     } else {
-      toast.error(response.message, {
-        position: "bottom-left",
+      swal({
+        title: "Oops!",
+        text: response.message,
+        icon: "error",
       });
     }
   };
