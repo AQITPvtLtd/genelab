@@ -59,12 +59,12 @@ export const POST = async (req, res) => {
         from: process.env.MY_EMAIL,
         to: process.env.MY_EMAIL,
         subject: "GeneLab Contact form",
-        attachments: [
-          {
-            filename: filename,
-            path: path.join(process.cwd(), "public/prescriptions/" + filename),
-          },
-        ],
+        // attachments: [
+        //   {
+        //     filename: filename,
+        //     path: path.join(process.cwd(), "public/prescriptions/" + filename),
+        //   },
+        // ],
         html: `<html lang="en">
             <head>
               <meta charset="utf-8">
