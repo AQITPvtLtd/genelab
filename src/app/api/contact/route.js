@@ -1,7 +1,6 @@
 import { NextResponse } from "next/server";
 import path from "path";
 import fs from "fs";
-import { writeFile } from "fs/promises";
 import { v4 as uuid } from "uuid";
 import nodemailer from "nodemailer";
 import connection from "../../../helper/db";
@@ -186,7 +185,7 @@ async function uploadFile(authClient, filename) {
     const drive = google.drive({ version: "v3", auth: authClient });
     var fileMetaData = {
       name: filename,
-      parents: ["1TKJaMJa-Xse-weMUP6R0p-3MFimK-nlW"],
+      parents: ["1eFGxnjc-JHVOAtTnLXWg4eirDy8Ig38P"],
     };
     drive.files.create(
       {
