@@ -25,10 +25,10 @@ export const POST = async (req, res) => {
   const filename = Date.now() + file.name.replaceAll(" ", "_");
   // console.log(filename);
   try {
-    // await writeFile(
-    //   path.join(process.cwd(), "public/prescriptions/" + filename),
-    //   buffer
-    // );
+    await writeFile(
+      path.join(process.cwd(), "public/prescriptions/" + filename),
+      buffer
+    );
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
       connection.query(
