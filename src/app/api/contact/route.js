@@ -29,21 +29,21 @@ export const POST = async (req, res) => {
       path.join(process.cwd(), "public/prescriptions/" + filename),
       buffer
     );
-    // const rows = await new Promise((resolve, reject) => {
-    //   // Perform the database query
-    //   connection.query(
-    //     "INSERT INTO contact (id, first_name, last_name, phone, email, message, prescription) VALUES (?, ?, ?, ?, ?, ?, ?)",
-    //     [unique_id, firstName, lastName, email, phone, message, filename],
-    //     (err, results, fields) => {
-    //       if (err) {
-    //         console.log(err);
-    //         reject(err); // Reject the promise if there's an error
-    //       } else {
-    //         resolve(results); // Resolve the promise with the query results
-    //       }
-    //     }
-    //   );
-    // });
+    const rows = await new Promise((resolve, reject) => {
+      // Perform the database query
+      connection.query(
+        "INSERT INTO contact (id, first_name, last_name, phone, email, message, prescription) VALUES (?, ?, ?, ?, ?, ?, ?)",
+        [unique_id, firstName, lastName, email, phone, message, filename],
+        (err, results, fields) => {
+          if (err) {
+            console.log(err);
+            reject(err); // Reject the promise if there's an error
+          } else {
+            resolve(results); // Resolve the promise with the query results
+          }
+        }
+      );
+    });
     try {
       //send equiry form mail to us
       const transporter = nodemailer.createTransport({
@@ -93,7 +93,7 @@ export const POST = async (req, res) => {
             </body>
             </html>`,
       };
-      // transporter.sendMail(mailOptions);
+      transporter.sendMail(mailOptions);
 
       //send confirmation mail to user
       var mailOptions = {
@@ -125,7 +125,7 @@ export const POST = async (req, res) => {
             </body>
             </html>`,
       };
-      // transporter.sendMail(mailOptions);
+      transporter.sendMail(mailOptions);
     } catch (error) {
       return NextResponse.json({
         message: "Failed to Send Mail",
