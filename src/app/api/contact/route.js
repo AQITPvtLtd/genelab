@@ -25,15 +25,15 @@ export const POST = async (req, res) => {
   const filename = Date.now() + file.name.replaceAll(" ", "_");
   // console.log(filename);
   try {
-    // await writeFile(
-    //   path.join(process.cwd(), "public/prescriptions/" + filename),
-    //   buffer
-    // );
+    await writeFile(
+      path.join(process.cwd(), "public/prescriptions/" + filename),
+      buffer
+    );
     const rows = await new Promise((resolve, reject) => {
       // Perform the database query
       connection.query(
         "INSERT INTO contact (id, first_name, last_name, phone, email, message, prescription) VALUES (?, ?, ?, ?, ?, ?, ?)",
-        [unique_id, firstName, lastName, phone, email, message, "filename"],
+        [unique_id, firstName, lastName, phone, email, message, filename],
         (err, results, fields) => {
           if (err) {
             console.log(err);
