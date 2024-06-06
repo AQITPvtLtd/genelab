@@ -17,6 +17,10 @@ const Articles = () => {
     };
     t();
   }, []);
+  function splitText(str) {
+    const x = str.split("(");
+    return x[0];
+  }
   // const [inputSearch, setInputSearch] = useState("");
   // const [isNameEmpty, setIsNameEmpty] = useState(false);
   // const [file, setFile] = useState(null);
@@ -164,9 +168,10 @@ const Articles = () => {
               alt="tests"
               className="rounded-t-xl w-full h-[200px]"
             />
-            <div className="text-center font-bold text-xl mt-2 text-blue">
-              {t.title}
-            </div>
+            <div
+              className="text-center font-bold text-xl mt-2 text-blue"
+              dangerouslySetInnerHTML={{ __html: splitText(t.title) }}
+            ></div>
             <div
               className="px-3 pt-3 mb-2 line-clamp-3 text-gray-600"
               dangerouslySetInnerHTML={{ __html: t.content }}

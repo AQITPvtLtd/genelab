@@ -29,10 +29,17 @@ const Detailed = ({ id }) => {
     return <div>Article not found</div>; // Render message if test with specified ID is not found
   }
 
+  function splitText(str) {
+    const x = str.split("(");
+    return x[0];
+  }
   return (
     <div className="mt-[230px] lg:mt-[190px]">
       <div className="mb-4 lg:mx-4 font-bold text-4xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
-        <h1 className="uppercase text-center">{obj.title}</h1>
+        <h1
+          className="uppercase text-center"
+          dangerouslySetInnerHTML={{ __html: obj.title }}
+        ></h1>
       </div>
       <div className="flex justify-center mb-2">
         <div className="flex">
@@ -72,9 +79,11 @@ const Detailed = ({ id }) => {
             <div key={t.key} className="mb-3 hover:underline hover:text-blue">
               <ul className=" list-disc ml-3">
                 <li>
-                  <Link href={`/articles/${t.id}`} className="flex">
-                    {t.title}
-                  </Link>
+                  <Link
+                    href={`/articles/${t.id}`}
+                    className="flex"
+                    dangerouslySetInnerHTML={{ __html: splitText(t.title) }}
+                  ></Link>
                 </li>
               </ul>
             </div>

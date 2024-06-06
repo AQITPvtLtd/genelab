@@ -38,6 +38,10 @@ const Articles = () => {
       },
     ],
   };
+  function splitText(str) {
+    const x = str.split("(");
+    return x[0];
+  }
   return (
     <div className="relative overflow-x-clip xl:mt-[300px] lg:mt-[500px] md:mt-[0px] mt-[780px]">
       <div className="absolute inset-0 bg-primary bg-opacity-60"></div>
@@ -66,13 +70,10 @@ const Articles = () => {
                     </div>
                   </div>
                 </div>
-                <h1 className="text-xl font-semibold mx-5 text-center mt-[50px] px-4 text-white">
-                  {d.title}
-                </h1>
-                {/* <p
-                  className="text-white line-clamp-3 leading-tight text-justify pl-5"
-                  dangerouslySetInnerHTML={{ __html: d.content }}
-                ></p> */}
+                <h1
+                  className="text-xl font-semibold mx-5 text-center mt-[50px] px-4 text-white"
+                  dangerouslySetInnerHTML={{ __html: splitText(d.title) }}
+                ></h1>
               </Link>
             ))}
           </Slider>
