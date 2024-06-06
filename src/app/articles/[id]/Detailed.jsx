@@ -55,7 +55,7 @@ const Detailed = ({ id }) => {
             width={1000}
             height={1000}
             className="lg:mx-4 lg:h-[500px] h-[200px]"
-            alt="Test Image"
+            alt={obj.alt}
           />
           <div className="mt-4">
             <p
