@@ -38,6 +38,12 @@ const menuData = [
     path: "/articles",
   },
   {
+    id: 10,
+    title: "Sample Reports",
+    newTab: false,
+    path: "/sample-reports",
+  },
+  {
     id: 8,
     title: "Contact Us",
     newTab: false,

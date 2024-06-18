@@ -122,7 +122,10 @@ const Header = () => {
                 >
                   <ul className="block lg:flex lg:space-x-4">
                     {menuData.map((menuItem, index) => (
-                      <li key={index} className="group relative lg:flex">
+                      <li
+                        key={index}
+                        className="group relative lg:flex hover:text-blue"
+                      >
                         <Link
                           href={menuItem.path}
                           className={`py-2 text-lg lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 ${
