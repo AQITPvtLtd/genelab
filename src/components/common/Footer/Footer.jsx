@@ -92,7 +92,11 @@ const Footer = () => {
                 <ul className="mb-0 list-none leading-loose">
                   <li className="leading-normal">
                     <h5 className="mb-2.5 font-bold uppercase">Address</h5>
-                    <Link href="/" className="hover:text-blue">
+                    <Link
+                      href="https://maps.app.goo.gl/iWRNV1iXZU3tJNdN8"
+                      target="__blank"
+                      className="hover:text-blue"
+                    >
                       G-36, First Floor, Outer circle, Connaught place, New
                       Delhi - 110001
                     </Link>
