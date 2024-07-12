@@ -80,7 +80,7 @@ const Detailed = ({ id }) => {
               <ul className=" list-disc ml-3">
                 <li>
                   <Link
-                    href={`/articles/${t.id}`}
+                    href={`/blogs/${t.id}`}
                     className="flex"
                     dangerouslySetInnerHTML={{ __html: splitText(t.title) }}
                   ></Link>

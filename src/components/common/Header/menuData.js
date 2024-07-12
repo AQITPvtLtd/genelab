@@ -8,20 +8,20 @@ const menuData = [
   {
     id: 2,
     title: "About Us",
-    path: "/about/who-are-we",
+    path: "/about/overview",
     newTab: true,
     submenu: [
       {
         id: 21,
-        title: "Who Are We",
+        title: "Overview",
         newTab: true,
-        path: "/about/who-are-we",
+        path: "/about/overview",
       },
       {
         id: 22,
-        title: "Why Choose Us",
+        title: "Partners",
         newTab: true,
-        path: "/about/why-choose-us",
+        path: "/about/partners",
       },
     ],
   },
@@ -30,12 +30,32 @@ const menuData = [
     title: "Find Tests",
     newTab: true,
     path: "/tests",
+    submenu: [
+      {
+        id: 31,
+        title: "Somantic Test",
+        newTab: true,
+        path: "/tests/somantic-test",
+      },
+      {
+        id: 32,
+        title: "Hereditary Cancer Test",
+        newTab: true,
+        path: "/tests/hereditary-cancer-test",
+      },
+      {
+        id: 33,
+        title: "Liquid Biopsy Test",
+        newTab: true,
+        path: "/tests/liquid-biopsy-test",
+      },
+    ],
   },
   {
     id: 4,
-    title: "Article",
+    title: "Blogs",
     newTab: false,
-    path: "/articles",
+    path: "/blogs",
   },
   {
     id: 10,
@@ -49,12 +69,12 @@ const menuData = [
     newTab: false,
     path: "/contact",
   },
-  {
-    id: 9,
-    title: "Book Test",
-    newTab: false,
-    path: "https://wa.link/z7ub10",
-  },
+  // {
+  //   id: 9,
+  //   title: "Book Test",
+  //   newTab: false,
+  //   path: "https://wa.link/z7ub10",
+  // },
   // {
   //   id: 10,
   //   title: "Admin",

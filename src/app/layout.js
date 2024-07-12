@@ -6,6 +6,7 @@ import "./globals.css";
 import ScrollToTop from "@/components/common/ScrollToTop/page";
 import Footer from "@/components/common/Footer/Footer";
 import UserProvider from "@/context/UserProvider";
+import Whatsapp from "@/components/common/Whatsapp/Whatsapp";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
@@ -21,6 +22,7 @@ export default function RootLayout({ children }) {
           <ToastContainer />
           <Header />
           {children}
+          <Whatsapp />
           <ScrollToTop />
           <Footer />
         </UserProvider>

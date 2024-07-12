@@ -48,7 +48,7 @@ const Section1 = () => {
                 animate && "animate__animated animate__slideInRight"
               }`}
             >
-              YOUR PREMIER GENETIC TESTING LABORATORY
+              YOUR PREMIER GENETIC TESTING PARTNER
             </h1>
             <p
               className={`bg-white bg-opacity-50 font-bold flex justify-center xl:mx-0 mx-5 xl:mt-4 mt-4 xl:font-semibold col-span-4 row-start-6 col-start-6 ${

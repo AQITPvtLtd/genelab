@@ -42,7 +42,7 @@ const HomeBanner = () => {
                 className={`font-bold xl:text-6xl lg:text-5xl text-2xl md:text-4xl flex justify-center text-white text-center`}
               >
                 YOUR PREMIER
-                <br /> GENETIC TESTING LABORATORY
+                <br /> GENETIC TESTING PARTNER
               </h1>
             </div>
             <div
