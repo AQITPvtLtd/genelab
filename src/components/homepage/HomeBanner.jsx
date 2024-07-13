@@ -28,7 +28,7 @@ const HomeBanner = () => {
 
         {/* <div className="absolute inset-0 bg-white bg-opacity-60 opacity-30 z-20"></div> */}
 
-        <div className=" absolute inset-0 xl:mt-[240px] mt-[15px] xl:ml-0 ml-5">
+        <div className=" absolute inset-0 xl:mt-[240px] mt-[15px] xl:ml-0 ml-5 flex justify-center">
           <ScrollTrigger
             onEnter={() => setAnimate(true)}
             onExit={() => setAnimate(false)}
@@ -39,7 +39,7 @@ const HomeBanner = () => {
               }`}
             >
               <h1
-                className={`font-bold xl:text-6xl lg:text-5xl text-2xl md:text-4xl flex justify-center text-white text-center`}
+                className={`font-bold xl:text-6xl lg:text-5xl text-2xl md:text-4xl text-white text-center`}
               >
                 YOUR PREMIER
                 <br /> GENETIC TESTING PARTNER
@@ -48,7 +48,7 @@ const HomeBanner = () => {
             <div
               className={`${animate && "animate__animated animate__slideInUp"}`}
             >
-              <h2 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl text-md flex justify-center text-white text-center xl:mt-10">
+              <h2 className="font-semibold xl:text-4xl lg:text-3xl md:text-2xl text-md text-white text-center xl:mt-10">
                 Personalized genetic testing <br /> transforming lives and
                 healthcare globally
               </h2>
