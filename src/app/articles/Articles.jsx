@@ -157,7 +157,7 @@ const Articles = () => {
       <div className="lg:grid grid-cols-3 gap-4 mx-6">
         {articles.map((t) => (
           <Link
-            href={`blogs/${t.id}`}
+            href={`/articles/${t.id}`}
             key={t.id}
             className="lg:border-2 lg:border-gray-400 rounded-xl hover:bg-black/10"
           >
