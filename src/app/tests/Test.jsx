@@ -178,7 +178,7 @@ const Test = ({ mail }) => {
         ))}
       </div> */}
       <div className="flex justify-center">
-        <div className="grid grid-cols-3 uppercase gap-10">
+        <div className="lg:grid grid-cols-3 uppercase gap-10">
           <div className="leading-loose">
             <div className="mt-8">
               <Link className="hover:text-blue" href="/">
