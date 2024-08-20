@@ -43,7 +43,7 @@ const Articles = () => {
     return x[0];
   }
   return (
-    <div className="relative overflow-x-clip xl:mt-[300px] lg:mt-[500px] md:mt-[0px] mt-[780px]">
+    <div className="relative overflow-x-clip ">
       <div className="absolute inset-0 bg-primary bg-opacity-60"></div>
       <div className="absolute w-full mt-14">
         <h1 className="mb-2 font-bold lg:text-5xl text-4xl text-white text-center">
@@ -65,7 +65,7 @@ const Articles = () => {
                         width={1000}
                         height={1000}
                         alt="testimonialImg"
-                        className="rounded-full w-[200px] h-[200px] object-fit"
+                        className="rounded-full w-[200px] h-[200px] object-cover"
                       />
                     </div>
                   </div>
