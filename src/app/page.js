@@ -13,7 +13,7 @@ const page = () => {
       <HomeBanner />
       <Section1 />
       <Privacy />
-      <Tests />
+      {/* <Tests /> */}
       <Articles />
       <Choose />
       <Contact />
