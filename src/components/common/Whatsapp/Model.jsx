@@ -11,6 +11,7 @@ const Model = () => {
           width={1000}
           height={1000}
           className="w-[300px] height-[300px]"
+          alt="whatsapp"
         />
         <div className="bg-white p-4">
           <Link

@@ -20,7 +20,7 @@ const Report = () => {
           >
             <div>
               <div className="flex justify-center">
-                <Image src="/pdf.png" width={100} height={100} />
+                <Image src="/pdf.png" width={100} height={100} alt="pdf" />
               </div>
               <div className="text-center text-lg font-medium mt-3">
                 {r.name}

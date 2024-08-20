@@ -62,7 +62,7 @@ const Header = () => {
     <div
       className={`overflow-x-clip header left-0 z-40 top-0 w-full items-center  backdrop-blur-sm bg-white  font-semibold ${
         sticky
-          ? "fixed z-[999] bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
+          ? "fixed z-40 bg-white !bg-opacity-80 shadow-sticky backdrop-blur-sm transition"
           : "absolute bg-transparent"
       }`}
     >

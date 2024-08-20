@@ -30,26 +30,26 @@ const menuData = [
     title: "Find Tests",
     newTab: true,
     path: "/tests",
-    submenu: [
-      {
-        id: 31,
-        title: "Somantic Test",
-        newTab: true,
-        path: "/tests/somantic-test",
-      },
-      {
-        id: 32,
-        title: "Hereditary Cancer Test",
-        newTab: true,
-        path: "/tests/hereditary-cancer-test",
-      },
-      {
-        id: 33,
-        title: "Liquid Biopsy Test",
-        newTab: true,
-        path: "/tests/liquid-biopsy-test",
-      },
-    ],
+    // submenu: [
+    //   {
+    //     id: 31,
+    //     title: "Somantic Test",
+    //     newTab: true,
+    //     path: "/tests/somantic-test",
+    //   },
+    //   {
+    //     id: 32,
+    //     title: "Hereditary Cancer Test",
+    //     newTab: true,
+    //     path: "/tests/hereditary-cancer-test",
+    //   },
+    //   {
+    //     id: 33,
+    //     title: "Liquid Biopsy Test",
+    //     newTab: true,
+    //     path: "/tests/liquid-biopsy-test",
+    //   },
+    // ],
   },
   {
     id: 4,

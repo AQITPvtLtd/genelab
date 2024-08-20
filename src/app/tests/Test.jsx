@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useState, useContext, useEffect } from "react";
-import Image from "next/image";
 import Link from "next/link";
 import UserContext from "@/context/UserContext";
 import { addTest } from "@/services/formData";
@@ -141,7 +140,7 @@ const Test = ({ mail }) => {
         <h1>FIND TESTS</h1>
       </div>
       {/* search */}
-      <div className="w-full">
+      {/* <div className="w-full">
         <div className="w-[80%] mx-auto text-black">
           <div className="w-full mb-10">
             <div className="flex justify-center items-center">
@@ -154,10 +153,10 @@ const Test = ({ mail }) => {
             </div>
           </div>
         </div>
-      </div>
-      <div className="lg:grid grid-cols-3 gap-4 mx-6">
+      </div> */}
+      {/* <div className="lg:grid grid-cols-3 gap-4 mx-6">
         {filteredData.map((t) => (
-          <Link
+          <Link className="hover:text-blue"
             href={`tests/${t.id}`}
             key={t.id}
             className="lg:border-2 lg:border-gray-400 rounded-xl hover:bg-black/10"
@@ -177,6 +176,123 @@ const Test = ({ mail }) => {
             </div>
           </Link>
         ))}
+      </div> */}
+      <div className="flex justify-center">
+        <div className="grid grid-cols-3 uppercase gap-10">
+          <div className="leading-loose">
+            <div className="mt-8">
+              <Link className="hover:text-blue" href="/">
+                SOMATIC GENETIC TESTING
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                GERMLINE GENETIC TESTING
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                LIQUID BIOPSY{" "}
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Tumor Profiling
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Sarcome Gene Panel
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Pharmacogenetic Testing
+              </Link>
+            </div>
+          </div>
+          <div className="leading-loose">
+            <h1 className="font-bold text-xl">Most Common Genetic Testing</h1>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Comprehensive Gene Panel
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Hereditary Cancer Panel
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                HBOC Cancer Panel{" "}
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                PDL-1 TESTING
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                BRCA 1 & BRCA 2{" "}
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                EGFR - ROS -ALK-MSI
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                FISH TESTING
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                IHC MARKER
+              </Link>
+            </div>
+          </div>
+          <div className="leading-loose">
+            <h1 className="font-bold text-xl">Genetic Testing Panel</h1>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                BREAST CANCER GENE PANEL
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                LUNG CANCER GENE PANEL
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                OVARION CANCER GENE PANEL
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                COLON CANCER GENE PANEL
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                COLORECTAL CANCER GENE PANEL{" "}
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                HEAD NECK CANCER GENE PANEL
+              </Link>
+            </div>
+            <div>
+              <Link className="hover:text-blue" href="/">
+                Blood Cancer Gene Panel
+              </Link>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
