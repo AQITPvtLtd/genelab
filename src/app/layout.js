@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   useEffect(() => {
     const interval = setInterval(() => {
       setShowPopup(true);
-    }, 15000); // Show popup every 15 seconds
+    }, 30000); // Show popup every 15 seconds
 
     return () => clearInterval(interval);
   }, []);
@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
           <ToastContainer />
           <Header />
           {children}
-          {/* {showPopup && <Popup onClose={handleClosePopup} />} */}
+          {showPopup && <Popup onClose={handleClosePopup} />}
           <Whatsapp />
           <ScrollToTop />
           <Footer />
