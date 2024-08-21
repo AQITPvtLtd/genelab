@@ -68,7 +68,7 @@ const Test = ({ mail }) => {
     }
   };
   return (
-    <div className="mt-[220px] lg:mt-[190px]">
+    <div className="mt-[220px] lg:mt-[140px]">
       {m != undefined && m === mail && (
         <form onSubmit={handleSubmit} className="mx-20">
           {/* name */}
@@ -146,7 +146,7 @@ const Test = ({ mail }) => {
           className="w-full h-[250px] object-cover"
           alt="test Image"
         />
-        <div className="absolute inset-0 bg-blue opacity-70 z-10"></div>
+        <div className="absolute inset-0 bg-blue opacity-70 "></div>
         <h1 className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center">
           Find Tests
         </h1>
@@ -189,7 +189,7 @@ const Test = ({ mail }) => {
           </Link>
         ))}
       </div> */}
-      <div className="mx-10 bg-white -translate-y-3">
+      <div className="mx-10 rounded-lg bg-white -translate-y-10 p-4 shadow-xl ">
         <div className="lg:grid grid-cols-3 gap-10">
           <div className="space-y-5 border-r-2">
             <div className="mt-8">
