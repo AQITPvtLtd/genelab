@@ -7,6 +7,8 @@ import { addTest } from "@/services/formData";
 import { toast } from "react-toastify";
 import swal from "sweetalert";
 import { getAllTests } from "@/services/tests";
+import { FaRegBookmark } from "react-icons/fa6";
+import Image from "next/image";
 
 const Test = ({ mail }) => {
   const context = useContext(UserContext);
@@ -136,8 +138,18 @@ const Test = ({ mail }) => {
         </form>
       )}
 
-      <div className="mb-10 font-bold text-5xl flex justify-center bg-gradient-to-t from-blue to-darkgreen text-transparent bg-clip-text">
-        <h1>FIND TESTS</h1>
+      <div className="relative">
+        <Image
+          src="/tests/test-banner.png"
+          width={1000}
+          height={1000}
+          className="w-full h-[250px] object-cover"
+          alt="test Image"
+        />
+        <div className="absolute inset-0 bg-blue opacity-70 z-10"></div>
+        <h1 className="text-white font-serif text-center text-6xl font-bold my-4 absolute inset-0 z-20 flex items-center justify-center">
+          Find Tests
+        </h1>
       </div>
       {/* search */}
       {/* <div className="w-full">
@@ -168,7 +180,7 @@ const Test = ({ mail }) => {
               alt="tests"
               className="rounded-t-xl w-full h-[200px]"
             />
-            <div className="text-center font-bold text-xl mt-2 text-blue">
+            <div className="text-center font-bold text-xl mt-1 text-blue">
               {t.name}
             </div>
             <div className="px-3 pt-3 mb-2 line-clamp-3 text-gray-600">
@@ -177,117 +189,142 @@ const Test = ({ mail }) => {
           </Link>
         ))}
       </div> */}
-      <div className="flex justify-center">
-        <div className="lg:grid grid-cols-3 uppercase gap-10">
-          <div className="leading-loose">
+      <div className="mx-10 bg-white -translate-y-3">
+        <div className="lg:grid grid-cols-3 gap-10">
+          <div className="space-y-5 border-r-2">
             <div className="mt-8">
-              <Link className="hover:text-blue" href="/">
-                SOMATIC GENETIC TESTING
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Somatic Genetic Testing
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                GERMLINE GENETIC TESTING
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Germline Genetic Testing
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                LIQUID BIOPSY{" "}
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Liquid Biopsy
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Tumor Profiling
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Sarcome Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Pharmacogenetic Testing
               </Link>
             </div>
           </div>
-          <div className="leading-loose">
-            <h1 className="font-bold text-xl">Most Common Genetic Testing</h1>
+          <div className="space-y-5 border-r-2">
+            <h1 className="font-bold text-xl text-blue">
+              Most Common Genetic Testing
+            </h1>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Comprehensive Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Hereditary Cancer Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                HBOC Cancer Panel{" "}
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                HBOC Cancer Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                PDL-1 TESTING
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                PDL-1 Testing
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                BRCA 1 & BRCA 2{" "}
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                BRCA 1 & BRCA 2
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 EGFR - ROS -ALK-MSI
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                FISH TESTING
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Fish Testing
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                IHC MARKER
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                IHC Marker
               </Link>
             </div>
           </div>
-          <div className="leading-loose">
-            <h1 className="font-bold text-xl">Genetic Testing Panel</h1>
+          <div className="space-y-5">
+            <h1 className="font-bold text-xl text-blue">
+              Genetic Testing Panel
+            </h1>
             <div>
-              <Link className="hover:text-blue" href="/">
-                BREAST CANCER GENE PANEL
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Breast Cancer Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                LUNG CANCER GENE PANEL
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Lung Cancer Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                OVARION CANCER GENE PANEL
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Ovarion Cancer Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                COLON CANCER GENE PANEL
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Colon Cancer Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                COLORECTAL CANCER GENE PANEL{" "}
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Colorectal Cancer Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
-                HEAD NECK CANCER GENE PANEL
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
+                Head Neck Cancer Gene Panel
               </Link>
             </div>
             <div>
-              <Link className="hover:text-blue" href="/">
+              <Link className="hover:text-blue flex" href="/">
+                <FaRegBookmark className="mt-1 mr-1" />
                 Blood Cancer Gene Panel
               </Link>
             </div>
