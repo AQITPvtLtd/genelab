@@ -38,7 +38,7 @@ export default function RootLayout({ children }) {
           <ToastContainer />
           <Header />
           {children}
-          {showPopup && <Popup onClose={handleClosePopup} />}
+          {/* {showPopup && <Popup onClose={handleClosePopup} />} */}
           <Whatsapp />
           <ScrollToTop />
           <Footer />
