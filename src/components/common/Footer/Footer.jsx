@@ -1,6 +1,9 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
+import { IoLocation } from "react-icons/io5";
+import { IoIosCall } from "react-icons/io";
+
 const Footer = () => {
   return (
     <div>
@@ -92,8 +95,12 @@ const Footer = () => {
             <div className="mt-6 lg:ml-5 col-span-4">
               <div className="mb-6">
                 <ul className="mb-0 list-none">
-                  <li className="">
-                    <h5 className="mb-2.5 font-bold uppercase">Address</h5>
+                  <h5 className="mb-2.5 font-bold uppercase">Address</h5>
+                  <li className="flex gap-2">
+
+                    <div className="mt-1 text-base">
+                      <IoLocation />
+                    </div>
                     <Link
                       href="https://maps.app.goo.gl/42gtbaZ928Hkwogv9"
                       target="__blank"
@@ -103,8 +110,10 @@ const Footer = () => {
                     </Link>
                   </li>
 
-                  <li className="mt-3">
-
+                  <li className="mt-3 flex gap-2">
+                    <div className="mt-1 text-base">
+                      <IoLocation />
+                    </div>
                     <Link
                       href="https://g.co/kgs/h3eZ9pw"
                       target="__blank"
@@ -114,10 +123,29 @@ const Footer = () => {
                     </Link>
                   </li>
 
+                  <li className="mt-3 flex gap-2">
+                    <div className="mt-1 text-base">
+                      <IoLocation />
+                    </div>
+                    <Link
+                      href="https://g.co/kgs/LR4vCU6"
+                      target="__blank"
+                      className="hover:text-blue"
+                    >
+                      GROUND FLOOR, AT-50/4, Block B, Baljit Nagar, Patel Nagar, New Delhi, Delhi, 110008
+                    </Link>
+                  </li>
+
                   <li className="mt-3 leading-normal">
                     <Link href="tel:+91-981 172 4700">
                       <h5 className="mb-2.5 font-bold uppercase">Phone</h5>
-                      <div className="hover:text-blue">+91-981 172 4700</div>
+                      <div className="flex gap-2">
+                        <div className="mt-1 text-base">
+                          <IoIosCall />
+                        </div>
+
+                        <div className="hover:text-blue">+91-981 172 4700</div>
+                      </div>
                     </Link>
                   </li>
                 </ul>
